@@ -10,9 +10,10 @@ body, html {
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 0in; /* Add 2 inches margin on both sides */
+  margin: 17px auto 0 auto; /* Add margin to the top */
+  padding: 0 0in; 
 }
+
 
 @media (max-width: 768px) {
   .container {
@@ -225,5 +226,28 @@ footer {
   position: relative; 
   width: 100%;
 }
+/* new */
+.icon {
+  width: 20px; /* Set the width of the icon */
+  height: 20px; /* Set the height of the icon */
+  vertical-align: middle; /* Align the icon with the text */
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.social-links a {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.social-icon .icon {
+  width: 24px; /* Set the size of social media icons */
+  height: 24px;
+}
+
+.social-links .social-icon .icon {
+  width: 24px; /* Set the size of social media icons */
+  height: 24px;
+}
+
 
 
