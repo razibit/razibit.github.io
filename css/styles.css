@@ -231,11 +231,11 @@ footer {
   width: 10px; /* Set the width of the icon */
   height: 10px; /* Set the height of the icon */
   vertical-align: middle; /* Align the icon with the text */
-  margin-right: 2px; /* Space between icon and text */
+  margin-right: px; /* Space between icon and text */
 }
 
 .social-links a {
-  margin: 0 2px;
+  margin: 0 0px;
   display: inline-block;
 }
 
