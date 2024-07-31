@@ -228,8 +228,8 @@ footer {
 }
 /* new */
 .icon {
-  width: 20px; /* Set the width of the icon */
-  height: 20px; /* Set the height of the icon */
+  width: 10px; /* Set the width of the icon */
+  height: 10px; /* Set the height of the icon */
   vertical-align: middle; /* Align the icon with the text */
   margin-right: 5px; /* Space between icon and text */
 }
@@ -240,13 +240,13 @@ footer {
 }
 
 .social-icon .icon {
-  width: 24px; /* Set the size of social media icons */
-  height: 24px;
+  width: 10px; /* Set the size of social media icons */
+  height: 10px;
 }
 
 .social-links .social-icon .icon {
-  width: 24px; /* Set the size of social media icons */
-  height: 24px;
+  width: 10px; /* Set the size of social media icons */
+  height: 10px;
 }
 
 
