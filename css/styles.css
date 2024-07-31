@@ -228,8 +228,8 @@ footer {
 }
 /* new */
 .icon {
-  width: 10px; /* Set the width of the icon */
-  height: 10px; /* Set the height of the icon */
+  width: 20px; /* Set the width of the icon */
+  height: 20px; /* Set the height of the icon */
   vertical-align: middle; /* Align the icon with the text */
   margin-right: 1px; /* Minimal space between icon and text */
 }
@@ -241,10 +241,10 @@ footer {
 }
 
 .social-links .social-icon .icon {
-  width: 15px; /* Set the size of social media icons */
-  height: 15px;
+  width: 20px; /* Set the size of social media icons */
+  height: 20px;
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 3px;
 }
 
 
