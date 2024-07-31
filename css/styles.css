@@ -231,23 +231,21 @@ footer {
   width: 10px; /* Set the width of the icon */
   height: 10px; /* Set the height of the icon */
   vertical-align: middle; /* Align the icon with the text */
-  margin-right: px; /* Space between icon and text */
+  margin-right: 2px; /* Minimal space between icon and text */
 }
 
 .social-links a {
-  margin: 0 0px;
+  margin: 0 3px; /* Minimal horizontal space between social icons */
   display: inline-block;
-}
-
-.social-icon .icon {
-  width: 10px; /* Set the size of social media icons */
-  height: 10px;
+  text-decoration: none; /* Remove underline from links */
 }
 
 .social-links .social-icon .icon {
   width: 10px; /* Set the size of social media icons */
   height: 10px;
+  display: inline-block;
 }
+
 
 
 
