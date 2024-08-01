@@ -247,6 +247,47 @@ footer {
   margin-right: 2px;
 }
 
+/* For /education page */
+
+/* Main Content Styles for Education Page */
+.main-content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.education-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.education-details h2 {
+  font-size: 1em;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.education-details p {
+  margin: 5px 0;
+}
+
+.education-details a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+
+
 
 
 
