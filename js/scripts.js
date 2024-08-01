@@ -19,3 +19,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const fullNewsToggle = document.getElementById("full-news-toggle");
+    const newsItems = document.querySelectorAll(".news-item");
+    let isExpanded = false;
+
+    fullNewsToggle.addEventListener("click", function(event) {
+        event.preventDefault();
+        isExpanded = !isExpanded;
+
+        newsItems.forEach((item, index) => {
+            if (isExpanded) {
+                item.style.display = "list-item";
+            } else {
+                item.style.display = index < 5 ? "list-item" : "none";
+            }
+        });
+
+        fullNewsToggle.textContent = isExpanded ? "Show less" : "Full list of news";
+    });
+});
+
+
