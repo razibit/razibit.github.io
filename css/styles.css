@@ -235,16 +235,16 @@ footer {
 }
 
 .social-links a {
-  margin: 0 3px; /* Minimal horizontal space between social icons */
+  margin: 0 2px; /* Minimal horizontal space between social icons */
   display: inline-block;
   text-decoration: none; /* Remove underline from links */
 }
 
 .social-links .social-icon .icon {
-  width: 20px; /* Set the size of social media icons */
-  height: 20px;
+  width: 22px; /* Set the size of social media icons */
+  height: 22px;
   display: inline-block;
-  margin-right: 3px;
+  margin-right: 2px;
 }
 
 
