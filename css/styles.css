@@ -136,8 +136,8 @@ main {
 
 .profile-pic {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   margin-bottom: 10px;
 }
