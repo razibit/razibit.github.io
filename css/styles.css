@@ -325,6 +325,58 @@ footer {
   color: white;
 }
 
+/* Blog Content Styles */
+/* Blog Content Styles */
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.blog-post {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-thumbnail {
+  flex: 0 0 100px;
+  margin-right: 20px;
+}
+
+.blog-thumbnail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.blog-details {
+  flex: 1;
+}
+
+.blog-details h2 {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+}
+
+.blog-details p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+
+
+
 
 
 
