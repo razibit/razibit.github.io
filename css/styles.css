@@ -325,66 +325,6 @@ footer {
   color: white;
 }
 
-/* Blog Content Styles */
-/* Blog Content Styles */
-.blog-content {
-  padding: 20px;
-}
-
-.blog-content h1 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-}
-
-.blog-post {
-  display: flex;
-  align-items: center;
-  background-color: #f0f0f0;
-  border-radius: 7px;
-  padding: 5.3px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.blog-thumbnail {
-  flex: 0 0 100px;
-  margin-right: 8px;
-}
-
-.blog-thumbnail img {
-  width: 200px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 7px;
-}
-
-.blog-details {
-  flex: 1;
-}
-
-.blog-details h2 {
-  font-size: 1.3em;
-  margin: 0 0 1px;
-}
-
-.blog-details p {
-  margin: 0;
-  color: #666;
-  line-height:normal;
-}
-
-.blog-post-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  margin-bottom: 20px; /* Add spacing between posts */
-}
-
-.blog-post-link:hover .blog-post {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly increase the shadow on hover */
-}
-
 /*for /Publications page */
 /* Main Content for Publications */
 .main-content h1 {
@@ -475,7 +415,6 @@ footer {
   padding: 10px;
   background-color: #f9f9f9;
 }
-
 
 
 
