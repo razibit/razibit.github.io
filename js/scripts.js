@@ -37,8 +37,31 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        fullNewsToggle.textContent = isExpanded ? "Show less" : "Full list of news";
+        fullNewsToggle.textContent = isExpanded ? "Show less" : "[Full list of news]";
     });
 });
+
+//for bibtex, abstract toggle functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".expandable-button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            const target = this.getAttribute("data-target");
+            const content = document.getElementById(target);
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+});
+
+
+
+
+
 
 
