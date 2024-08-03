@@ -51,14 +51,14 @@ header {
   position: relative;
   border-radius:20px; /* Curved corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow for floating effect */
-  margin-top: px;
+  margin-top: 0;
   z-index: 0;
 }
 
 .logo {
   float: left;
   font-size: 17px;
-  margin-left: px;
+  margin-left: 0;
 }
 
 .logo a {
@@ -98,7 +98,7 @@ nav ul li a.active::after {
   right: 0;
   bottom: -2px;
   height: 2px;
-  background-color: #FFD700;
+  background-color: #ff0000;
   transition: width 0.3s;
   width: 100%;
 }
