@@ -317,7 +317,7 @@ footer {
 }
 
 .news-date {
-  background-color: #2ec317;
+  background-color: #62b04a;
   border-radius: 8px;
   padding: 5px;
   display: inline-block;
@@ -342,7 +342,7 @@ footer {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .thumbnail img {
