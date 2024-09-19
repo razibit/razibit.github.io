@@ -1,0 +1,16 @@
+All Rights Reserved
+
+Copyright (c) 2024 Rajib Dab
+
+This source code and all content on this repository and website (razibit.github.io) are the proprietary and intellectual property of Rajib Dab.
+
+All rights reserved. 
+
+You may not:
+- Copy, modify, or distribute this code or any of its contents.
+- Use this code or any part of it for personal, commercial, or educational purposes.
+- Reproduce, republish, or make derivative works from the code, design, or any material related to this project.
+
+Any unauthorized use of the materials is strictly prohibited and may result in legal action.
+
+For permissions or inquiries, please contact the owner at rajibdeb7t@gmail.com.
