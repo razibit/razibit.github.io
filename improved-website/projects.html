@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Projects by Rajib Dab - CS Undergrad, Department of Computer Science & Engineering, Metropolitan University Bangladesh">
+    <meta name="author" content="Rajib Dab">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Projects - Rajib Dab" />
+    <meta property="og:description" content="Research and academic projects by Rajib Dab, CS Undergrad at Metropolitan University Bangladesh" />
+    <meta property="og:image" content="https://razibit.github.io/images/rajib_dab.jpg" />
+    <meta property="og:url" content="https://razibit.github.io/projects" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects - Rajib Dab">
+    <meta name="twitter:description" content="Research and academic projects by Rajib Dab, CS Undergrad at Metropolitan University Bangladesh">
+    <meta name="twitter:image" content="https://razibit.github.io/images/rajib_dab.jpg">
+    
+    <title>Projects - Rajib Dab | CS Undergrad</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        /* Enhanced Sidebar Styles */
+        .left-sidebar {
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .profile-container {
+            text-align: center;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .profile-pic {
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #f8f9fa;
+        }
+        
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+        
+        .left-sidebar h2 {
+            margin: 1rem 0 0.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .left-sidebar h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: -5px;
+            left: 25%;
+            border-radius: 2px;
+        }
+        
+        .university-info {
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #505050;
+            padding: 0.5rem;
+            background-color: rgba(98, 176, 74, 0.07);
+            border-radius: 8px;
+        }
+        
+        .contact-info {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: #505050;
+        }
+        
+        .contact-info p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-info .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.75rem;
+            opacity: 0.8;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+            padding: 0.75rem 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .social-icon {
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            background-color: #eef5eb;
+        }
+        
+        .social-icon img {
+            width: 20px;
+            height: 20px;
+            opacity: 0.8;
+        }
+        
+        .section {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(98, 176, 74, 0.2);
+        }
+        
+        .section p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #505050;
+        }
+        
+        .section a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .section a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+    </style>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCR8R9EEF9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QCR8R9EEF9');
+    </script>
+</head>
+
+<body>
+    <a href="#content" class="skip-link visually-hidden">Skip to content</a>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/" aria-label="Rajib Dab homepage">Rajib Dab/ রাজিব দেব</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="publications.html" class="nav-link">Publications</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="awards.html" class="nav-link">Honors & Awards</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="content">
+        <aside class="left-sidebar">
+            <div class="profile-container">
+                <img src="images/rajib_dab.jpg" alt="Rajib Dab" class="profile-pic" width="150" height="150">
+                <h2>Rajib Dab</h2>
+            </div>
+            
+            <div class="university-info">
+                <p>CS Undergrad<br>Department of Computer Science & Engineering<br>Metropolitan University Bangladesh</p>
+            </div>
+
+            <div class="contact-info">
+                <p>
+                    <img src="/assets/icons/social_icons/email.png" alt="" class="icon" aria-hidden="true">
+                    <span>razibdev7(at)gmail(dot)com</span>
+                </p>
+                <p>
+                    <img src="/assets/icons/social_icons/location.png" alt="" class="icon" aria-hidden="true">
+                    <span>Sylhet, Bangladesh</span>
+                </p>
+            </div>
+            
+            <div class="social-links" aria-label="Social media links">
+                <a href="https://linkedin.com/in/rajibdab" class="social-icon" aria-label="LinkedIn profile">
+                    <img src="/assets/icons/social_icons/linkedin.png" alt="" class="icon" aria-hidden="true">
+                </a>
+                <a href="https://x.com/ups01v3" class="social-icon" aria-label="X (Twitter) profile">
+                    <img src="/assets/icons/social_icons/x.png" alt="" class="icon" aria-hidden="true">
+                </a>
+                <a href="https://github.com/razibit" class="social-icon" aria-label="GitHub profile">
+                    <img src="/assets/icons/social_icons/github.png" alt="" class="icon" aria-hidden="true">
+                </a>
+                <a href="https://www.researchgate.net/profile/Rajib-Dab" class="social-icon" aria-label="ResearchGate profile">
+                    <img src="/assets/icons/social_icons/researchgate.png" alt="" class="icon" aria-hidden="true">
+                </a>
+                <a href="/" class="social-icon" aria-label="DBLP profile">
+                    <img src="/assets/icons/social_icons/dblp.png" alt="" class="icon" aria-hidden="true">
+                </a>
+                <a href="https://orcid.org/0009-0003-9057-1711" class="social-icon" aria-label="ORCID profile">
+                    <img src="/assets/icons/social_icons/orcid.png" alt="" class="icon" aria-hidden="true">
+                </a>
+            </div>
+
+            <div class="section" aria-labelledby="research-interests">
+                <h3 id="research-interests">Research Interest</h3>
+                <p>Computer Vision</p>
+                <p>Natural Language Processing</p>
+            </div>
+            
+            <div class="section" aria-labelledby="spotlight">
+                <h3 id="spotlight">Spotlight!</h3>
+                <p>1. Started working on AI Financial Advisor <a href="/Projects">SenFAI</a>.</p>
+                <p>2. I will be presenting my project on Kaggle AI competition this September.</p>
+            </div>
+        </aside>
+
+        <article class="main-content">
+            <h1>Research & Academic Projects</h1>
+            
+            <section class="project-item">
+                <h2>SenFAI: AI Financial Advisor</h2>
+                <div class="project-meta">
+                    <span class="project-date">2024 - Present</span>
+                    <span class="project-category">Financial Technology</span>
+                </div>
+                <p>
+                    An AI-powered financial advisor system that provides personalized financial guidance for university students.
+                    SenFAI uses natural language processing to understand financial queries and machine learning algorithms to
+                    provide tailored advice based on individual spending patterns and goals.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Project Page</a>
+                    <a href="https://github.com/razibit/senfai" class="project-link">GitHub</a>
+                    <a href="#" class="project-link">Demo</a>
+                </div>
+                <div class="project-tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">React</span>
+                </div>
+            </section>
+            
+            <section class="project-item">
+                <h2>COVID-19 Detection from Chest X-rays</h2>
+                <div class="project-meta">
+                    <span class="project-date">2023</span>
+                    <span class="project-category">Computer Vision, Healthcare</span>
+                </div>
+                <p>
+                    Developed a deep learning model that can detect COVID-19 from chest X-ray images with high accuracy.
+                    The model uses convolutional neural networks and was trained on a dataset of over 10,000 X-ray images.
+                    The project aims to provide a fast and reliable screening tool for healthcare providers.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Project Page</a>
+                    <a href="https://github.com/razibit/covid-xray" class="project-link">GitHub</a>
+                    <a href="#" class="project-link">Paper</a>
+                </div>
+                <div class="project-tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">CNN</span>
+                </div>
+            </section>
+            
+            <section class="project-item">
+                <h2>Bangla Handwritten Digit Recognition</h2>
+                <div class="project-meta">
+                    <span class="project-date">2022</span>
+                    <span class="project-category">Computer Vision, Natural Language Processing</span>
+                </div>
+                <p>
+                    Created a model that can recognize handwritten Bangla digits with high accuracy.
+                    The system was trained on the NumtaDB dataset and achieved a 98.2% accuracy rate.
+                    This project helps bridge the digital divide by supporting Bangla language recognition in digital systems.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Project Page</a>
+                    <a href="https://github.com/razibit/bangla-digit" class="project-link">GitHub</a>
+                </div>
+                <div class="project-tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Keras</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </section>
+            
+            <section class="project-item">
+                <h2>Smart Agriculture Monitoring System</h2>
+                <div class="project-meta">
+                    <span class="project-date">2021</span>
+                    <span class="project-category">IoT, Machine Learning</span>
+                </div>
+                <p>
+                    Designed and implemented an IoT-based system that monitors soil moisture, temperature, and humidity
+                    for optimal crop growth. The system sends data to a cloud platform where machine learning algorithms
+                    predict irrigation needs and detect potential plant diseases early.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Project Page</a>
+                    <a href="https://github.com/razibit/smart-agriculture" class="project-link">GitHub</a>
+                </div>
+                <div class="project-tech-stack">
+                    <span class="tech-tag">Arduino</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">IoT</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Cloud Computing</span>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rajib Dab | Last Update: <time datetime="2024-08">August 2024</time></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js" defer></script>
+    <script src="js/projects.js" defer></script>
+</body>
+</html> 

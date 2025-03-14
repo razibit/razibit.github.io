@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-link");
     const currentPath = window.location.pathname;
@@ -18,6 +17,31 @@ document.addEventListener("DOMContentLoaded", function () {
             link.style.color = "";
         });
     });
+    
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('nav');
+    
+    if (mobileMenuButton && navMenu) {
+        // Add ID to nav if not present
+        if (!navMenu.id) {
+            navMenu.id = 'nav-menu';
+        }
+        
+        mobileMenuButton.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Close menu when clicking on a link
+        const menuLinks = document.querySelectorAll('nav a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -37,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        fullNewsToggle.textContent = isExpanded ? "Show less" : "[Full list of news]";
+        fullNewsToggle.innerHTML = isExpanded ? "<i>[Collapse News]</i>" : "<i>[Full list of News]</i>";
     });
 });
 
