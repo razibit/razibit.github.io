@@ -1,63 +1,25 @@
-# Improved Personal Academic Website
+## About the Project
 
-An enhanced version of the personal academic website for Rajib Dab, with significantly improved responsiveness and accessibility features.
+This website is a representation of my personal projects, interests, and online presence. All content and code used to build this website are proprietary, and no part of it is available for copying, modification, or redistribution without explicit permission.
 
-## Enhancements
+## License
 
-### Responsive Design Improvements
-- Fully responsive design using modern CSS techniques like CSS variables and flexbox
-- Mobile-first approach with optimized layouts for all device sizes
-- Smoother transitions and animations
-- Better handling of content overflow on small screens
-- Improved touch targets for mobile users
+This repository and the content within it are **All Rights Reserved**.
 
-### Accessibility Enhancements
-- Semantic HTML5 structure
-- ARIA attributes for improved screen reader support
-- Keyboard navigation support
-- Skip to content link
-- Proper focus management
-- Alternative text for images
-- Color contrast compliance
-- Support for reduced motion preferences
+- **No part of this codebase** or website is allowed to be copied, modified, or used in any way, whether for personal or commercial purposes.
+- Unauthorized distribution, modification, or use of this code is strictly prohibited.
+- All images, text, and other assets on this website are the intellectual property of the creator and are protected under copyright laws.
 
-### Dark Mode Support
-- Automatic detection of system preferences
-- Manual toggle with persistent user preferences
-- Optimized color palette for both light and dark modes
+For any inquiries regarding permissions or collaborations, please contact me directly.
 
-### Performance Improvements
-- Optimized asset loading with preconnect and preloading
-- Image lazy loading
-- Debounced event handlers
-- Minified CSS and JS (production version)
-- Improved caching strategies
+## Contributions
 
-### Other Features
-- Enhanced social media sharing metadata
-- Better print styles
-- Improved JavaScript organization with modular functions
-- Cross-browser compatibility
+Contributions, issues, and feature requests are not accepted for this project, as it is intended to be a personal, closed-source website.
 
-## How to Use
+## Disclaimer
 
-1. Clone this repository
-2. Customize the content in the HTML files
-3. Replace images in the `images` folder
-4. Update social media links and personal information
-5. Deploy to your preferred hosting service
+The content on this website is for informational purposes only, and I reserve the right to update or change it at any time.
 
-## Browser Support
+---
 
-Tested and works on:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome for Android)
-
-## Credits
-
-- PT Serif font from Google Fonts
-- SVG icons for dark mode toggle
-- Original design by Rajib Dab 
+**Website**: [rajibdab.me](https://rajibdab.me)
