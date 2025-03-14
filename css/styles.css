@@ -1,808 +1,725 @@
-/* General Styles */
-body, html {
+/* Modern Responsive Website Styles
+ * Enhanced version of razibit.github.io with improved responsiveness
+ */
+
+/* Base Styles and CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Serif', serif;
-  box-sizing: border-box;
-  background-color: #f4f4f4;
 }
 
+:root {
+  --primary-color: #333;
+  --secondary-color: #62b04a;
+  --background-color: #ffffff;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --link-color: #0066cc;
+  --link-hover-color: #ff0000;
+  --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --font-main: 'PT Serif', serif;
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+  --container-width: 1200px;
+  --tag-background: #f0f0f0;
+  --tag-color: #555;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Accessibility helpers */
+.visually-hidden, .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.visually-hidden:focus, .visually-hidden:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Container with improved responsive behavior */
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 17px auto 0 auto; /* Add margin to the top */
-  padding: 0 0in; 
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  transition: padding var(--transition-speed) ease;
 }
 
-/* Responsive containers */
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 20px;
-  }
+/* Accessibility - Focus Styles */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0 15px;
-    margin: 10px auto 0 auto;
-  }
+/* Header Styles - Enhanced for responsiveness */
+header {
+  background-color: var(--card-background);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--header-shadow);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  transition: padding var(--transition-speed) ease;
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 10px;
-  }
-}
-
-/* Container for header */
 header .container {
-  width: 100%; /* Adjust this percentage as needed */
-  max-width: 1340px; /* Optional: Set a maximum width for large screens */
-  margin: 0 auto; /* Center the container */
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
 
-/* Additional margin adjustments for the logo and nav if needed */
-header .logo {
-  margin-left: 0; /* Remove extra left margin if not needed */
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-header nav {
-  margin-right: 0; /* Remove extra right margin if not needed */
+.logo a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
 }
 
-/* Hamburger menu icon - hidden by default */
+.logo a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Navigation with enhanced mobile styles */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color var(--transition-speed) ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width var(--transition-speed) ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  color: var(--link-hover-color);
+}
+
+nav ul li a:hover::after, nav ul li a.active::after {
+  width: 100%;
+}
+
+/* Menu toggle - Improved for touch */
 .menu-toggle {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
   cursor: pointer;
-  font-size: 24px;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+  z-index: 100;
 }
 
 .menu-toggle span {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: all 0.3s ease;
+  background-color: var(--primary-color);
+  transition: all var(--transition-speed) ease;
 }
 
-/* Header Styles */
-header {
-  background-color: white;
-  color: #333;
-  padding: 30px 0;
-  position: relative;
-  border-radius: 20px; /* Curved corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow for floating effect */
-  margin-top: 0;
-  z-index: 1000;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.logo {
-  float: left;
-  font-size: 17px;
-  margin-left: 0;
-}
-
-.logo a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-}
-
-nav {
-  float: right;
-  margin-right: 20px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: #333;
-  text-decoration: none;
-  padding: 5px 10px;
-  position: relative;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  height: 2px;
-  background-color: #333;
-}
-
-/* Responsive Design for Header and Navigation */
-@media (max-width: 1000px) {
-  nav ul li {
-    margin: 0 5px;
-  }
-  
-  nav ul li a {
-    padding: 5px;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  
-  nav {
-    float: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 20px 20px;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    margin: 0;
-    z-index: 1001;
-  }
-  
-  nav.active {
-    max-height: 500px;
-    padding: 15px 0;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-    text-align: center;
-    width: 100%;
-  }
-  
-  nav ul li a {
-    display: block;
-    padding: 10px 0;
-  }
-  
-  .logo {
-    float: none;
-    margin: 0;
-    display: inline-block;
-  }
-  
-  header .container {
-    padding: 0 20px;
-  }
-  
-  header {
-    padding: 20px 0;
-  }
-}
-
-/* Mobile-first approach for main content */
-@media (max-width: 768px) {
-  main.container {
-    flex-direction: column;
-  }
-  
-  .left-sidebar, .main-content {
-    width: 100%;
-    margin: 0;
-    padding: 20px 0;
-  }
-  
-  .profile-pic {
-    max-width: 200px;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  .social-links {
-    justify-content: center;
-  }
-}
-
-/* Main Content Styles */
+/* Main Content Layout - Improved flex structure */
 main {
   display: flex;
-  margin-top: 20px;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+  flex: 1;
 }
 
+/* Sidebar with sticky behavior */
 .left-sidebar {
-  flex: 0 0 20%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  flex: 0 0 300px;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
   text-align: center;
-  position: sticky; 
-  top: 13px; /* Distance from the top of the viewport */
+  position: sticky;
+  top: calc(5rem + 20px); /* Adjust based on header height */
   height: fit-content;
-  min-width: 250px;
+  z-index: 5;
 }
 
 .profile-pic {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  width: 130px;
-  height: 130px;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--background-color);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
 }
 
 .left-sidebar h2 {
-  margin: 10px 0;
-  font-size: 1.2em;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .left-sidebar p {
-  margin: 5px 0;
-  font-size: 14px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
-.icon-location {
-  margin-right: 5px;
-}
-
+/* Social links with improved spacing and touch targets */
 .social-links {
-  margin: 10px 0;
   display: flex;
   justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
   flex-wrap: wrap;
 }
 
 .social-links a {
-  margin: 0 5px;
-  text-decoration: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  background-color: rgba(98, 176, 74, 0.1);
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  margin-right: 5px;
+  width: 20px;
+  height: 20px;
 }
 
-.section {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.section h3 {
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
-
-/* Main Content Styles */
+/* Main content area */
 .main-content {
   flex: 1;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  min-width: 300px;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  min-width: 0; /* Ensures content can shrink below min-content width */
 }
 
-.main-content p {
-  margin: 10px 0;
-  line-height: 1.6;
+.main-content h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .main-content h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 1.5em;
-  font-weight: bold;
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
 }
 
-/* Footer Styles */
-footer {
-  background-color: transparent; 
-  color: black; 
-  text-align: center;
-  padding: px 0; 
-  font-size: 11px; 
-  position: relative; 
-  width: 100%;
-}
-/* new */
-.social-links a {
-  margin: 0 2px; /* Minimal horizontal space between social icons */
-  display: inline-block;
-  text-decoration: none; /* Remove underline from links */
+.main-content h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
 }
 
-.social-links .social-icon .icon {
-  width: 22px; /* Set the size of social media icons */
-  height: 22px;
-  display: inline-block;
-  margin-right: 2px;
-}
-
-/* For /education page */
-
-/* Main Content Styles for Education Page */
-.main-content h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.education-item {
-  display: flex;
-  align-items: center;
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.education-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  margin-right: 20px;
-}
-
-.education-details h2 {
-  font-size: 1.2em;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.education-details p {
-  margin: 5px 0;
-}
-
-.education-details a {
-  text-decoration: none;
-  color: #0066cc;
-}
-
-/* for 'Recent News' to get expanded when clicked & show full news list */
-
-/* Initially hide extra news items */
-.news-item {
-  display: none;
-  margin-bottom: 10px;
-}
-
-/* Show the first five news items */
-.news-item:nth-child(-n+5) {
-  display: list-item;
-}
-
-/* Styles for the toggle link */
-.full-news-toggle {
-  margin-top: 10px;
-  text-align: right;
-}
-
-.full-news-toggle a {
-  text-decoration: none;
-  color: #0066cc;
-  cursor: pointer;
-}
-
-/* Styling for the year headings in the news list */
-.news-year {
-  list-style-type: none; /* Remove list-style marker */
-  font-size: 1.2em; /* Slightly larger font size */
-  font-weight: bold;
-  margin-top: 20px; /* Add some space above the year */
-  margin-bottom: 10px; /* Add some space below the year */
-  color: #333; /* Darker color for emphasis */
-}
-
-/* Styling for the entire news list */
+/* News items with improved styling */
 .news-list {
-  list-style-type: none; /* Remove default list-style */
-  padding-left: 20px; /* Add left padding for the list */
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/* Styling for individual news items */
+.news-year {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--primary-color);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
 .news-item {
-  list-style-type: disc; /* Set list-style marker to disc */
-  margin-bottom: 10px; /* Space between news items */
-  margin-left: 20px; /* Offset the marker slightly */
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.news-item::before {
+  content: '•';
+  position: absolute;
+  left: 0.5rem;
+  color: var(--secondary-color);
 }
 
 .news-date {
-  background-color: #62b04a;
-  border-radius: 8px;
-  padding: 5px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
   display: inline-block;
   font-weight: bold;
   color: white;
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
 }
 
-/*for /Publications page */
-/* Main Content for Publications */
-.main-content h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.full-news-toggle {
+  text-align: right;
+  margin-top: 1rem;
 }
 
-.main-content h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+.full-news-toggle a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-style: italic;
+  transition: color var(--transition-speed) ease;
 }
 
+.full-news-toggle a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Project items styling */
+.project-item {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.project-item h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-meta {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-date {
+  font-weight: bold;
+}
+
+.project-category {
+  font-style: italic;
+}
+
+.project-links {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #4f9b38;
+  transform: translateY(-2px);
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-tag {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--tag-background);
+  color: var(--tag-color);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Publication items with improved layout */
 .publication-item {
   display: flex;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 12px;
-  margin-bottom: 10px;
+  gap: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnail img {
-  width: 100px; /* adjust as needed */
+  width: 120px;
   height: auto;
-  border-radius: 5px;
-  margin-right: 17px;
+  border-radius: calc(var(--border-radius) / 2);
+  object-fit: cover;
 }
 
 .publication-details {
   flex: 1;
+  min-width: 0; /* Ensures content can shrink below min-content width */
 }
 
 .conference-name {
   background-color: #f0f0f0;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
   display: inline-block;
-  margin-bottom: 1px;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
 }
 
 .paper-title {
   font-weight: bold;
-  color: #0066cc;
+  color: var(--link-color);
   text-decoration: none;
-  font-size: 1.2em;
-}
-
-.paper-title:hover {
-  text-decoration: underline;
-}
-
-.authors a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.authors a:hover {
-  text-decoration: underline;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .buttons {
-  margin-top: 1px;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .expandable-button {
   background-color: #f0f0f0;
   border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin-right: 4px;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.expandable-button a {
-  color: inherit;
-  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .expandable-button:hover {
   background-color: #e0e0e0;
 }
 
-.expandable-content {
-  display: none;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #f9f9f9;
+/* Footer styling */
+footer {
+  background-color: transparent;
+  color: var(--text-color);
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  margin-top: auto;
 }
 
-/* Enhanced Responsive Styles */
-@media (max-width: 1024px) {
-  main {
-    gap: 15px;
+/* Advanced Responsive Design */
+/* Large devices */
+@media (max-width: 1200px) {
+  :root {
+    --container-width: 95%;
   }
   
   .left-sidebar {
-    flex: 0 0 25%;
+    flex: 0 0 280px;
   }
 }
 
-/* Tablet portrait and landscape */
-@media (min-width: 768px) and (max-width: 1024px) {
-  header .container {
-    padding: 0 15px;
-  }
-  
-  .logo {
-    font-size: 16px;
-  }
-  
-  nav ul li {
-    margin: 0 3px;
-  }
-  
-  nav ul li a {
-    font-size: 14px;
-    padding: 3px 5px;
-  }
-}
-
-@media (max-width: 768px) {
-  main {
-    flex-direction: column;
-  }
-  
+/* Medium devices */
+@media (max-width: 992px) {
   .left-sidebar {
-    flex: 1 0 100%;
-    position: static;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .main-content {
-    flex: 1 0 100%;
-    width: 100%;
+    flex: 0 0 250px;
+    padding: 1.5rem;
   }
   
   .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
   }
   
-  /* Menu open state for body */
-  body.menu-open {
-    overflow: hidden;
+  main {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
   }
   
-  /* Responsive news list improvements */
-  .news-list {
-    padding-left: 10px;
+  header {
+    padding: 0.75rem 0;
   }
   
-  .news-item {
-    margin-left: 15px;
+  .menu-toggle {
     display: flex;
+  }
+  
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--card-background);
+    box-shadow: var(--card-shadow);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed) ease;
+    z-index: -1;
+  }
+  
+  nav.active {
+    max-height: 500px;
+    padding: 1rem 0;
+    z-index: 10;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 0.75rem 0;
+  }
+  
+  main {
     flex-direction: column;
   }
   
-  .news-date {
-    margin-bottom: 5px;
-    display: inline-block;
-    align-self: flex-start;
+  .left-sidebar {
+    position: static;
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
   
-  /* Better footer spacing */
-  footer {
-    padding: 15px 0;
-    margin-top: 30px;
-  }
-  
-  /* Fix for publication items on mobile */
-  .publication-item {
+  .publication-item,
+  .project-item {
     flex-direction: column;
   }
   
   .thumbnail img {
     width: 100%;
     max-width: 200px;
-    margin: 0 0 15px 0;
+    margin: 0 auto 1rem;
+    display: block;
   }
   
-  .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+  .body-with-menu-open {
+    overflow: hidden;
   }
   
-  .expandable-button {
-    margin-bottom: 5px;
+  .project-links {
+    justify-content: center;
   }
   
-  /* Additional spacing for better readability */
-  .main-content h3 {
-    margin-top: 25px;
-  }
-  
-  .section {
-    margin-top: 25px;
+  .project-tech-stack {
+    justify-content: center;
   }
 }
 
-/* Small phone styles */
-@media (max-width: 480px) {
-  header {
-    border-radius: 15px;
-    padding: 10px 0;
-    width: 100%;
+/* Mobile Phones */
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
   }
   
-  header .container {
-    padding: 0 10px;
+  header {
+    padding: 0.5rem 0;
+    border-radius: 0 0 calc(var(--border-radius) / 2) calc(var(--border-radius) / 2);
+  }
+  
+  .container {
+    padding: 0 1rem;
   }
   
   .logo {
-    font-size: 14px;
-    max-width: 65%;
+    font-size: 1rem;
+    max-width: 75%;
   }
   
-  .menu-toggle {
-    right: 10px;
+  .profile-pic {
+    width: 110px;
+    height: 110px;
   }
   
-  .menu-toggle span {
-    width: 25px;
-    height: 2px;
-    margin: 5px 0;
+  .main-content, 
+  .left-sidebar {
+    padding: 1.25rem;
+    border-radius: calc(var(--border-radius) / 2);
+  }
+  
+  .social-links {
+    gap: 0.5rem;
+  }
+  
+  .social-links a {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .news-item {
+    padding-left: 1.25rem;
+  }
+  
+  .news-date {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+    margin-right: 0.3rem;
+  }
+  
+  .buttons {
+    gap: 0.3rem;
+  }
+  
+  .expandable-button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .project-item h2 {
+    font-size: 1.3rem;
+  }
+  
+  .project-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .project-link {
+    text-align: center;
+  }
+  
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 400px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .left-sidebar, 
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .news-year {
+    font-size: 1.1rem;
+  }
+  
+  .social-links a {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .icon {
+    width: 16px;
+    height: 16px;
   }
   
   .profile-pic {
     width: 100px;
     height: 100px;
   }
-  
-  .left-sidebar h2 {
-    font-size: 1.1em;
-  }
-  
-  .left-sidebar p, .main-content p {
-    font-size: 13px;
-  }
-  
-  .section h3, .main-content h3 {
-    font-size: 1em;
-  }
-  
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-  
-  /* Better mobile news list */
-  .news-list {
-    padding-left: 5px;
-  }
-  
-  .news-item {
-    margin-left: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .news-date {
-    font-size: 12px;
-    padding: 3px 5px;
-  }
-  
-  /* Better touch targets for mobile */
-  a, button, .nav-link, .social-icon {
-    min-height: 44px;
-    min-width: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .social-links a {
-    margin: 0 3px;
-  }
-  
-  nav ul li a {
-    padding: 12px 0;
-  }
-
-  /* Ensure container is properly sized */
-  .container {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 10px;
-    margin-top: 10px;
-  }
 }
 
-/* Very small devices */
-@media (max-width: 320px) {
-  .logo {
-    font-size: 12px;
-    max-width: 60%;
-  }
-  
-  header {
-    padding: 8px 0;
-  }
-  
-  .profile-pic {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .menu-toggle span {
-    width: 22px;
-    height: 2px;
-    margin: 4px 0;
-  }
-}
-
-/* Handle landscape orientation */
-@media (max-height: 480px) and (orientation: landscape) {
-  header {
-    padding: 10px 0;
-  }
-  
-  nav.active {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-  
-  .profile-pic {
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin-right: 15px;
-  }
-  
-  .left-sidebar {
-    text-align: left;
-    padding: 15px;
-  }
-  
-  .social-links {
-    justify-content: flex-start;
-  }
-}
-
-/* Ensure all images are responsive globally */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Menu toggle animation */
+/* Animation for Menu Toggle */
 body.menu-open .menu-toggle span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: translateY(10px) rotate(45deg);
 }
 
 body.menu-open .menu-toggle span:nth-child(2) {
@@ -810,13 +727,46 @@ body.menu-open .menu-toggle span:nth-child(2) {
 }
 
 body.menu-open .menu-toggle span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: translateY(-10px) rotate(-45deg);
 }
 
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  
+  header, .left-sidebar, footer {
+    display: none;
+  }
+  
+  .main-content {
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
 
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
+/* Remove any dark mode transition effects */
+body, a, button, .logo, .nav-links, .social-links a, .project-link, .publication-link {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-
-
-
-
+/* Remove other dark mode specific classes */ 
