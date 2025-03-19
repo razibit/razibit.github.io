@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // Add resize listener for responsive adjustments
   setupResponsiveAdjustments();
   
+  // Display popup notification on specific pages
+  showPageNotification();
+  
   /**
    * Highlight the current page in navigation
    */
@@ -212,5 +215,68 @@ document.addEventListener("DOMContentLoaded", function() {
         img.setAttribute('loading', 'lazy');
       }
     });
+  }
+  
+  /**
+   * Shows a notification popup on specified pages
+   */
+  function showPageNotification() {
+    // Check if current page is one that needs the notification
+    const currentPath = window.location.pathname;
+    const notificationPages = [
+      '/experience.html', 
+      '/projects.html', 
+      '/publications.html',
+      '/blog.html',
+      '/awards.html',
+      '/experience', 
+      '/projects', 
+      '/publications',
+      '/blog',
+      '/awards'
+    ];
+    
+    if (!notificationPages.some(page => currentPath.endsWith(page))) {
+      return; // Exit if not on a relevant page
+    }
+    
+    // Create popup element if it doesn't exist
+    let popup = document.getElementById('page-notification');
+    if (!popup) {
+      popup = document.createElement('div');
+      popup.id = 'page-notification';
+      popup.className = 'popup-notification';
+      popup.innerHTML = `
+        Some pages contain placeholder content for design purposes.
+        <button class="close-button" aria-label="Close notification">&times;</button>
+      `;
+      document.body.appendChild(popup);
+      
+      // Add close button functionality
+      const closeButton = popup.querySelector('.close-button');
+      closeButton.addEventListener('click', function() {
+        hidePopup();
+      });
+    }
+    
+    // Show the popup
+    setTimeout(() => {
+      popup.classList.add('show');
+    }, 300);
+    
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+      hidePopup();
+    }, 5000);
+    
+    function hidePopup() {
+      popup.classList.remove('show');
+      // Remove from DOM after animation completes
+      setTimeout(() => {
+        if (popup.parentNode) {
+          popup.parentNode.removeChild(popup);
+        }
+      }, 300);
+    }
   }
 }); 

@@ -769,4 +769,54 @@ body, a, button, .logo, .nav-links, .social-links a, .project-link, .publication
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Remove other dark mode specific classes */ 
+/* Remove other dark mode specific classes */
+
+/* Popup notification */
+.popup-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(51, 51, 51, 0.95);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 16px;
+    max-width: 90%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.popup-notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-notification .close-button {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.popup-notification .close-button:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .popup-notification {
+        width: 85%;
+        font-size: 13px;
+    }
+} 
