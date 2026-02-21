@@ -1,5 +1,3 @@
-import profileImg from "/images/rajib_dab.jpg";
-
 export default function About() {
   return (
     <section id="about" className="py-20 px-6 bg-white">
@@ -12,7 +10,7 @@ export default function About() {
           {/* Photo */}
           <div className="shrink-0">
             <img
-              src={profileImg}
+              src="/images/rajib_dab.jpg"
               alt="Rajib Dab"
               className="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover shadow-lg"
             />
