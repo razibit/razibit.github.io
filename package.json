@@ -1,0 +1,34 @@
+{
+  "name": "razibit.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razibit/razibit.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razibit/razibit.github.io/issues"
+  },
+  "homepage": "https://github.com/razibit/razibit.github.io#readme",
+  "description": "",
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.0",
+    "@vitejs/plugin-react": "^5.1.4",
+    "react-icons": "^5.5.0",
+    "tailwindcss": "^4.2.0",
+    "vite": "^7.3.1"
+  }
+}
