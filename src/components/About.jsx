@@ -10,7 +10,7 @@ export default function About() {
           {/* Photo */}
           <div className="shrink-0">
             <img
-              src="/images/rajib_dab.jpg"
+              src="images/rajib_dab.jpg"
               alt="Rajib Dab"
               className="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover shadow-lg"
             />
