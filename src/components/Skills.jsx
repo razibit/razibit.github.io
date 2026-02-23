@@ -2,9 +2,9 @@ import { skillCategories } from "../data/skills";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 bg-surface">
+    <section id="skills" className="py-20 px-6 bg-surface dark:bg-gray-800">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
           Skills
         </h2>
 
@@ -12,7 +12,7 @@ export default function Skills() {
           {skillCategories.map((cat) => (
             <div
               key={cat.title}
-              className="bg-card rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              className="bg-card dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
             >
               <h3 className="text-sm font-semibold uppercase tracking-wider text-accent mb-4">
                 {cat.title}
@@ -20,7 +20,7 @@ export default function Skills() {
               <ul className="space-y-2">
                 {cat.skills.map((s) => (
                   <li key={s}>
-                    <span className="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
+                    <span className="inline-block bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
                       {s}
                     </span>
                   </li>

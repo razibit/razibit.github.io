@@ -16,9 +16,9 @@ export default function Publications() {
   };
 
   return (
-    <section id="publications" className="py-20 px-6 bg-white">
+    <section id="publications" className="py-20 px-6 bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-4xl">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
           Publications
         </h2>
 
@@ -28,21 +28,21 @@ export default function Publications() {
             return (
               <div
                 key={pub.id}
-                className="bg-surface rounded-xl border border-gray-100 overflow-hidden"
+                className="bg-surface dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden"
               >
                 {/* Header */}
                 <button
                   onClick={() => toggle(pub.id)}
-                  className="w-full text-left px-6 py-5 flex items-start gap-4 hover:bg-gray-50 transition-colors"
+                  className="w-full text-left px-6 py-5 flex items-start gap-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                 >
                   <span className="shrink-0 mt-1 bg-accent text-white text-xs font-bold px-2 py-0.5 rounded">
                     {pub.year}
                   </span>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 leading-snug">
+                    <h3 className="font-semibold text-gray-900 dark:text-white leading-snug">
                       {pub.title}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                       {pub.authors.map((a, i) => (
                         <span key={a}>
                           {a === "Rajib Dab" ? (
@@ -62,7 +62,7 @@ export default function Publications() {
                   </div>
                   <HiChevronDown
                     size={20}
-                    className={`text-gray-400 shrink-0 transition-transform ${
+                    className={`text-gray-400 dark:text-gray-500 shrink-0 transition-transform ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -70,12 +70,12 @@ export default function Publications() {
 
                 {/* Expandable body */}
                 {isOpen && (
-                  <div className="px-6 pb-5 space-y-4 border-t border-gray-100">
+                  <div className="px-6 pb-5 space-y-4 border-t border-gray-100 dark:border-gray-700">
                     <div>
                       <h4 className="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1 mt-4">
                         Abstract
                       </h4>
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                         {pub.abstract}
                       </p>
                     </div>

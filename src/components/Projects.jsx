@@ -13,12 +13,12 @@ export default function Projects() {
       : projects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" className="py-20 px-6 bg-surface">
+    <section id="projects" className="py-20 px-6 bg-surface dark:bg-gray-800">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
           Projects
         </h2>
-        <p className="text-center text-gray-500 mb-10 max-w-xl mx-auto">
+        <p className="text-center text-gray-500 dark:text-gray-400 mb-10 max-w-xl mx-auto">
           A mix of research concepts, published datasets, and production-ready
           systems.
         </p>
@@ -32,7 +32,7 @@ export default function Projects() {
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 active === f
                   ? "bg-accent text-white"
-                  : "bg-white text-gray-600 border border-gray-200 hover:border-accent hover:text-accent"
+                  : "bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-accent hover:text-accent"
               }`}
             >
               {f}
@@ -45,23 +45,23 @@ export default function Projects() {
           {filtered.map((p) => (
             <div
               key={p.id}
-              className="bg-card rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow flex flex-col"
+              className="bg-card dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow flex flex-col"
             >
               {(p.featured || p.isResearch) && (
                 <span
                   className={`self-start text-xs font-semibold uppercase tracking-wide px-2.5 py-0.5 rounded-full mb-3 ${
                     p.isResearch
-                      ? "bg-purple-100 text-purple-700"
+                      ? "bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300"
                       : "bg-accent/10 text-accent"
                   }`}
                 >
                   {p.isResearch ? "Research Concept" : "Featured"}
                 </span>
               )}
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {p.title}
               </h3>
-              <p className="text-sm text-gray-500 leading-relaxed mb-4 flex-1">
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4 flex-1">
                 {p.description}
               </p>
 
@@ -70,7 +70,7 @@ export default function Projects() {
                 {p.tags.map((t) => (
                   <span
                     key={t}
-                    className="bg-gray-100 text-gray-600 text-xs px-2.5 py-0.5 rounded-full"
+                    className="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs px-2.5 py-0.5 rounded-full"
                   >
                     {t}
                   </span>

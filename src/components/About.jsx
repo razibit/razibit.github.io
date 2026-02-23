@@ -1,8 +1,8 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 px-6 bg-white">
+    <section id="about" className="py-20 px-6 bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
           About Me
         </h2>
 
@@ -17,10 +17,10 @@ export default function About() {
           </div>
 
           {/* Bio */}
-          <div className="space-y-4 text-gray-600 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
             <p>
               I am a 3rd-year Computer Science &amp; Engineering student at{" "}
-              <span className="font-medium text-gray-800">
+              <span className="font-medium text-gray-800 dark:text-gray-100">
                 Metropolitan University, Bangladesh
               </span>
               , focused on building intelligent systems that bridge AI research

@@ -41,12 +41,12 @@ const interests = [
 
 export default function ResearchInterests() {
   return (
-    <section id="research" className="py-20 px-6 bg-surface">
+    <section id="research" className="py-20 px-6 bg-surface dark:bg-gray-800">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
           Research Interests
         </h2>
-        <p className="text-center text-gray-500 mb-12 max-w-lg mx-auto">
+        <p className="text-center text-gray-500 dark:text-gray-400 mb-12 max-w-lg mx-auto">
           The areas I actively explore, build in, and aim to publish research
           within.
         </p>
@@ -55,13 +55,13 @@ export default function ResearchInterests() {
           {interests.map((item) => (
             <div
               key={item.title}
-              className="bg-card rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              className="bg-card dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
             >
               <div className="text-accent mb-3">{item.icon}</div>
-              <h3 className="font-semibold text-gray-900 mb-1">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
                 {item.title}
               </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
                 {item.description}
               </p>
             </div>
