@@ -10,6 +10,7 @@ export const skillCategories = [
       "Deep Learning",
       "Computer Vision",
       "Natural Language Processing",
+      "Rajib Dab",
     ],
   },
   {

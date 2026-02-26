@@ -19,7 +19,7 @@ export default function About() {
           {/* Bio */}
           <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
             <p>
-              I am a 3rd-year Computer Science &amp; Engineering student at{" "}
+              I am a 4th year Computer Science &amp; Engineering student at{" "}
               <span className="font-medium text-gray-800 dark:text-gray-100">
                 Metropolitan University, Bangladesh
               </span>
@@ -29,7 +29,7 @@ export default function About() {
             <p>
               In May 2025, I founded{" "}
               <span className="font-medium text-accent">Apostrophe Labs</span>{" "}
-              — a research-driven venture exploring AI hardware innovation,
+              a research-driven venture exploring AI hardware innovation,
               intelligent devices, and data engineering. Our flagship vision is
               the <em>AI Photographer Device</em>: an autonomous assistant that
               guides solo travelers with voice instructions and smart framing.
@@ -37,7 +37,7 @@ export default function About() {
             <p>
               My research interests span Computer Vision, Natural Language
               Processing, Human-AI Interaction, and Autonomous AI Systems. I
-              believe in building first and publishing second — every project I
+              believe in building first and publishing second every project I
               take on is designed to solve a real problem.
             </p>
           </div>
