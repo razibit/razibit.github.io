@@ -10,10 +10,12 @@ import ResearchInterests from "./components/ResearchInterests";
 import Awards from "./components/Awards";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import DisclaimerPopup from "./components/DisclaimerPopup";
 
 export default function App() {
   return (
     <ThemeProvider>
+      <DisclaimerPopup />
       <Navbar />
       <main>
         <Hero />
