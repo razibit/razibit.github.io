@@ -1,7 +1,13 @@
 /academic/
 
+/node_modules/
+/.next/
+/out/
+*.tsbuildinfo
+
 # Local browser automation logs, traces, and screenshots
 /.playwright-cli/
+/output/playwright/
 
 # Local OS and editor metadata
 Thumbs.db

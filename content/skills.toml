@@ -1,0 +1,13 @@
+note = "Representative stack · confirm before publishing"
+
+[[groups]]
+name = "Frontend"
+items = ["React", "Next.js", "TypeScript"]
+
+[[groups]]
+name = "Backend"
+items = ["Node.js", "REST APIs", "PostgreSQL"]
+
+[[groups]]
+name = "Delivery"
+items = ["Git", "Testing", "Accessibility"]

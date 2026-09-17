@@ -7,11 +7,12 @@
   function renderTheme(theme) {
     root.dataset.theme = theme;
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme)));
-    themeColor.setAttribute('content', theme === 'dark' ? '#191D21' : '#FAFAF8');
+    if (themeColor) themeColor.setAttribute('content', theme === 'dark' ? '#191D21' : '#FAFAF8');
   }
 
   renderTheme(root.dataset.theme || (media.matches ? 'dark' : 'light'));
-  document.querySelector('.theme-control').hidden = false;
+  const themeControl = document.querySelector('.theme-control');
+  if (themeControl) themeControl.hidden = false;
   buttons.forEach(button => button.addEventListener('click', () => {
     const theme = button.dataset.themeChoice;
     root.dataset.themeSource = 'explicit';
@@ -30,22 +31,21 @@
 
   const profile = document.querySelector('.profile');
   function fitProfile() {
-    profile.dataset.sticky = String(window.innerWidth >= 1024 && profile.offsetHeight + 64 <= window.innerHeight);
+    if (profile) profile.dataset.sticky = String(window.innerWidth >= 1024 && profile.offsetHeight + 64 <= window.innerHeight);
   }
   fitProfile();
   window.addEventListener('resize', fitProfile, { passive: true });
-  if ('ResizeObserver' in window) new ResizeObserver(fitProfile).observe(profile);
+  if ('ResizeObserver' in window && profile) new ResizeObserver(fitProfile).observe(profile);
 
   const sections = [...document.querySelectorAll('main > section[id]')];
   const links = [...document.querySelectorAll('.section-nav a')];
   let scheduled = false;
   function updateNavigation() {
     scheduled = false;
+    if (!sections.length) return;
     let current = sections[0].id;
     const threshold = Math.min(160, innerHeight * 0.25);
-    for (const section of sections) {
-      if (section.getBoundingClientRect().top <= threshold) current = section.id;
-    }
+    for (const section of sections) if (section.getBoundingClientRect().top <= threshold) current = section.id;
     if (scrollY > 0 && innerHeight + scrollY >= document.documentElement.scrollHeight - 2) current = sections.at(-1).id;
     links.forEach(link => {
       if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
@@ -56,7 +56,7 @@
     if (!scheduled) { scheduled = true; requestAnimationFrame(updateNavigation); }
   }
   window.addEventListener('scroll', scheduleNavigation, { passive: true });
-  window.addEventListener('resize', scheduleNavigation, { passive: true });
+  window.addEventListener('resize', scheduleNavigation);
   window.addEventListener('hashchange', scheduleNavigation);
   updateNavigation();
 })();

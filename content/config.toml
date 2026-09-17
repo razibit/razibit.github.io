@@ -1,0 +1,62 @@
+[site]
+title = "Razib — Full-stack product engineer"
+description = "Razib — full-stack product engineer. Selected work, experience, and a thoughtful approach to building software."
+favicon = "/favicon.svg"
+last_updated = "September 2026"
+
+[author]
+name = "Razib"
+title = "Full-stack product engineer"
+introduction = "Thoughtful interfaces.\nReliable systems.\nClear communication."
+positioning = "From the first product decision to the details that make it work."
+email = ""
+resume_url = ""
+
+[social]
+github = ""
+linkedin = ""
+
+[features]
+one_page_home = true
+
+[[navigation]]
+title = "Work"
+type = "section"
+target = "work"
+href = "/#work"
+
+[[navigation]]
+title = "Experience"
+type = "section"
+target = "experience"
+href = "/#experience"
+
+[[navigation]]
+title = "Skills"
+type = "section"
+target = "skills"
+href = "/#skills"
+
+[[navigation]]
+title = "About"
+type = "section"
+target = "about"
+href = "/#about"
+
+[[navigation]]
+title = "Contact"
+type = "section"
+target = "contact"
+href = "/#contact"
+
+[[navigation]]
+title = "Blog"
+type = "page"
+target = "blog"
+href = "/blog/"
+
+[[navigation]]
+title = "News"
+type = "section"
+target = "news"
+href = "/#news"

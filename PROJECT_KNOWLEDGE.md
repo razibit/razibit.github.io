@@ -94,11 +94,20 @@ Keep entries factual, concise, and dated where timing matters. Prefer confirmed 
 - The academic portfolio is represented at `razibit.github.io/academic`.
 - The parent repository ignores `/academic/`.
 
+### 2026-09-18 — File-based content system
+
+- Both repositories now use Node.js 22, Next.js static export, Markdown front matter, TOML configuration, and content loaders under `src/lib/`.
+- Work content lives in `content/` at the parent root. Projects generate `/work/<slug>/`, posts generate `/blog/<slug>/`, and pages generate `/<slug>/`; news, materials, experience, skills, profile, navigation, and contact data are also content-driven.
+- Academic content lives in the independent `academic` repository root. Its static routes are `/`, `/publications/`, `/teaching/`, `/services/`, `/materials/`, and `/blog/`, with dynamic Markdown routes for additional pages and posts. `next.config.ts` prefixes generated academic assets and internal links with `/academic`.
+- Academic publications are read from the configured `content/publications.toml` source, normally `content/publications.bib`, with selected flags, previews, abstracts, BibTeX, DOI/arXiv, code, PDF, poster, and slides fields.
+- `npm run validate-content` checks front matter, TOML, BibTeX, duplicate slugs/keys, content directories, and local public assets before `npm run build`. The GitHub Actions workflows run both commands with Node.js 22 on `master` (work) and `main` (academic).
+- The nested `academic/JiayiGeng.github.io/` repository is preserved as ignored local reference material. It is excluded from the academic TypeScript scope and is not copied into generated output.
+- No Git commits, pushes, branches, pull requests, or deployments were performed during this implementation.
+
 ### Open items
 
-- The exact framework, build commands, and runtime requirements for each repository have not yet been documented here.
-- The exact production hosting/deployment configuration has not yet been documented here.
-- The final route and content taxonomy for both portfolios has not yet been documented here.
+- GitHub Pages deployment has not been live-verified from this workspace; only local validation and static builds are confirmed.
+- Final personal work and academic content, verified contact/profile links, publication entries, and local media remain to be supplied before publishing.
 - The purpose of the root `state` directory has not yet been established.
 
 ## Update log
