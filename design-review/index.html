@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Razib — Portfolio concept review</title>
+  <style>
+    :root {font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#202428;background:#fafaf8;line-height:1.6;font-size:16px;--accent:#185f73;--muted:#596168;--line:#c5cacd}
+    *{box-sizing:border-box} body{margin:0} button,input{font:inherit} a{color:var(--accent);text-underline-offset:4px} :focus-visible{outline:3px solid var(--accent);outline-offset:4px} button,a,input{touch-action:manipulation} button{cursor:pointer} h1,h2,h3,p{margin-top:0} h1{font-size:32px;line-height:1.2;letter-spacing:normal;margin-bottom:16px} h2{font-size:21px;line-height:1.3;margin-bottom:10px} h3{font-size:17px;margin-bottom:8px} p{margin-bottom:16px} .wrap{max-width:1480px;margin:auto;padding:40px 32px} .eyebrow{font-size:14px;color:var(--muted);margin-bottom:12px} .intro{max-width:760px} .intro p{color:var(--muted)} .toolbar{display:flex;flex-wrap:wrap;gap:24px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:24px 0 32px} fieldset{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0} legend{font-size:14px;font-weight:600;padding:0;margin-bottom:8px} .choice{display:flex;align-items:center;gap:8px;border:1px solid #7a8288;border-radius:5px;padding:8px 14px;min-height:44px;cursor:pointer;background:transparent} .choice:has(input:checked){background:#e7eff1;border-color:var(--accent);color:var(--accent)} input{accent-color:var(--accent);margin:0;width:16px;height:16px} .hint{font-size:14px;color:var(--muted)} #state{align-self:end;margin:0 0 8px;min-width:200px} .concepts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start} article{min-width:0} .description{min-height:112px;font-size:15px;color:var(--muted)} .preview{display:block;width:100%;padding:0;border:1px solid var(--line);background:#eef0f2;border-radius:0;text-align:left;line-height:0} .preview img{width:100%;height:auto;display:block} .links{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;margin:14px 0 28px} .links a{display:inline-flex;align-items:center;min-height:32px} .notes{border-top:1px solid var(--line);margin-top:42px;padding-top:28px;max-width:1000px} .notes ul{padding-left:20px} .notes li{margin:8px 0} .notes p,.notes li{color:var(--muted);font-size:15px} .palette{border-collapse:collapse;width:100%;font-size:14px;margin:16px 0} th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)} th:first-child,td:first-child{padding-left:0} .table-scroll{overflow-x:auto} code{font:13px ui-monospace,monospace} footer{border-top:1px solid var(--line);padding-top:24px;margin-top:36px;color:var(--muted);font-size:14px}
+    dialog{padding:0;border:1px solid #7a8288;background:#fafaf8;color:#202428;max-width:calc(100vw - 32px);width:1180px;max-height:94vh} dialog::backdrop{background:rgb(10 15 20 / .72)} .dialog-head{position:sticky;top:0;display:flex;gap:16px;justify-content:space-between;align-items:center;background:#fafaf8;border-bottom:1px solid var(--line);padding:12px 20px;z-index:1}.dialog-head h2{margin:0;font-size:18px}.dialog-head button{border:1px solid #7a8288;border-radius:4px;background:#fff;color:#202428;padding:8px 16px;min-height:44px} .dialog-content{padding:20px;background:#e7e9eb} #detail-image{display:block;width:100%;height:auto;margin:auto} dialog[data-device="mobile"] #detail-image{max-width:390px} .dialog-hint{font-size:14px;margin:0;padding:12px 20px;background:#fafaf8} .skip{position:absolute;left:16px;top:-70px;padding:10px;background:white;z-index:2}.skip:focus{top:10px}
+    @media(max-width:1050px){.concepts{grid-template-columns:1fr;max-width:850px;margin:auto}.description{min-height:0}.preview{max-width:720px}.wrap{padding:32px 24px}}
+    @media(max-width:520px){.wrap{padding:28px 18px}h1{font-size:28px}.toolbar{gap:20px}#state{width:100%;margin:0}.dialog-head{padding:10px;gap:8px}.dialog-head h2{font-size:16px}.dialog-content{padding:0}dialog{max-width:calc(100vw - 12px)}.palette{font-size:13px}th,td{padding:8px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#concepts">Skip to concepts</a>
+  <main class="wrap">
+    <header class="intro">
+      <p class="eyebrow">Razib / Work portfolio / Design review</p>
+      <h1>Three directions. One portfolio.</h1>
+      <p>Compare composition, reading rhythm, and the way each direction presents your work. Every concept uses the same representative content and paired light and dark themes.</p>
+      <p class="hint">These are static visual concepts, not an implemented portfolio. Project details, experience, headshot, résumé, and signature are placeholders. Choose a direction before the final build.</p>
+    </header>
+    <form class="toolbar" aria-label="Preview controls">
+      <fieldset><legend>Screen</legend>
+        <label class="choice"><input type="radio" name="device" value="desktop" checked>Desktop · full page</label>
+        <label class="choice"><input type="radio" name="device" value="mobile">Mobile · first project</label>
+      </fieldset>
+      <fieldset><legend>Theme</legend>
+        <label class="choice"><input type="radio" name="theme" value="light" checked>Light</label>
+        <label class="choice"><input type="radio" name="theme" value="dark">Dark</label>
+      </fieldset>
+      <p id="state" class="hint" aria-live="polite">Desktop · Light · 3 concepts</p>
+    </form>
+    <section id="concepts" class="concepts" aria-label="Three portfolio concepts">
+      <article data-concept="profile-practice">
+        <h2>Profile &amp; Practice</h2>
+        <p class="description">A persistent personal introduction beside a structured work column. Brittany’s left-side arrangement meets Tania’s reading clarity. Your identity and contact action stay close while clients assess the work.</p>
+        <button class="preview" type="button" aria-label="Enlarge Profile and Practice"><img src="previews/profile-practice-light.png" alt="Profile and Practice, complete desktop page in light mode: left profile with headshot above name, projects, experience, skills, About, contact, and signature footer."></button>
+        <div class="links" aria-label="Profile and Practice individual files"><a href="previews/profile-practice-light.png">Desktop light</a><a href="previews/profile-practice-dark.png">Desktop dark</a><a href="previews/profile-practice-mobile-light.png">Mobile light</a><a href="previews/profile-practice-mobile-dark.png">Mobile dark</a></div>
+      </article>
+      <article data-concept="personal-editorial">
+        <h2>Personal Editorial</h2>
+        <p class="description">A compact, welcoming reading flow with top navigation and editorial project entries. Closest to Tania’s organization, with Cassidy’s sense of personality. Suits readers who want a clear, direct introduction.</p>
+        <button class="preview" type="button" aria-label="Enlarge Personal Editorial"><img src="previews/personal-editorial-light.png" alt="Personal Editorial, complete desktop page in light mode: top navigation, personal introduction, sequential project entries, experience, skills, About, contact, and signature footer."></button>
+        <div class="links" aria-label="Personal Editorial individual files"><a href="previews/personal-editorial-light.png">Desktop light</a><a href="previews/personal-editorial-dark.png">Desktop dark</a><a href="previews/personal-editorial-mobile-light.png">Mobile light</a><a href="previews/personal-editorial-mobile-dark.png">Mobile dark</a></div>
+      </article>
+      <article data-concept="work-focus">
+        <h2>Work in Focus</h2>
+        <p class="description">Wider project sections pair imagery with concise contribution summaries. Kent’s image/text balance at a smaller scale, organized with Tania’s restraint. Puts product evidence early for startup recruiters.</p>
+        <button class="preview" type="button" aria-label="Enlarge Work in Focus"><img src="previews/work-focus-light.png" alt="Work in Focus, complete desktop page in light mode: compact introduction, wide project case studies, paired experience and skills, About and contact, and signature footer."></button>
+        <div class="links" aria-label="Work in Focus individual files"><a href="previews/work-focus-light.png">Desktop light</a><a href="previews/work-focus-dark.png">Desktop dark</a><a href="previews/work-focus-mobile-light.png">Mobile light</a><a href="previews/work-focus-mobile-dark.png">Mobile dark</a></div>
+      </article>
+    </section>
+    <section class="notes" aria-labelledby="review-notes">
+      <h2 id="review-notes">What to evaluate</h2>
+      <p>Open a concept to see it larger. Compare the first impression, project readability, content density, and personal feel. Mobile views show the introduction through the first project; the rest of each page continues below.</p>
+      <h3>Shared design commitments</h3>
+      <ul>
+        <li>Single-page section links; no portfolio content hidden in tabs. The controls above switch review images only.</li>
+        <li>Normal body type around 16px, supporting type around 14px, restrained headings, and natural letter spacing. Intended typefaces: Inter, Source Sans 3, and IBM Plex Sans respectively; raster mockups are approximate.</li>
+        <li>No decorative animation, parallax, cursor effects, or moving cards. Final links will retain underlines and controls a visible 3px focus outline.</li>
+        <li>A compact footer, inspired by Una’s personal sign-off, with a clearly labeled signature placeholder.</li>
+      </ul>
+      <h3>Tablet behavior for the selected direction</h3>
+      <p>At roughly 834px wide, Profile &amp; Practice moves its rail into a normal-flow introduction and wrapping navigation. Personal Editorial retains its centered reading flow. Work in Focus removes the narrow section-label margin and stacks project media above text when two columns become cramped. Exact breakpoints will be tested in the chosen implementation.</p>
+      <h3>Contrast targets</h3>
+      <p>The proposed color tokens below were calculated against each theme’s background. These are token measurements, not a claim that generated image pixels or a future implementation have passed a complete accessibility audit.</p>
+      <div class="table-scroll"><table class="palette"><caption>Proposed foreground/background contrast ratios</caption><thead><tr><th>Theme</th><th>Background</th><th>Primary text</th><th>Supporting text</th><th>Links</th><th>Control outline</th></tr></thead><tbody><tr><th>Light</th><td><code>#FAFAF8</code></td><td>14.95:1</td><td>6.03:1</td><td>6.87:1</td><td>3.74:1</td></tr><tr><th>Dark</th><td><code>#191D21</code></td><td>14.84:1</td><td>8.17:1</td><td>9.23:1</td><td>4.37:1</td></tr></tbody></table></div>
+      <p>Target <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">WCAG AA text contrast</a>: 4.5:1 for normal text, 3:1 for large text. Essential control boundaries and states target <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">3:1 non-text contrast</a>. Responsive behavior, keyboard navigation, screen-reader output, and exact rendered contrast belong to validation of the selected implementation.</p>
+      <h3>Reference studies</h3>
+      <p><a href="https://www.taniarascia.com/">Tania Rascia</a> · <a href="https://brittanychiang.com/">Brittany Chiang</a> · <a href="https://cassidoo.co/">Cassidy Williams</a> · <a href="https://una.im/about">Una Kravets</a> · <a href="https://kentcdodds.com/">Kent C. Dodds</a></p>
+      <p><a href="content.txt">Shared representative content</a> · <a href="README.md">Review notes and limitations</a> · <a href="prompts.json">Generation briefs</a></p>
+    </section>
+    <footer>Prepared for local review · September 17, 2026 · Work portfolio only. Pick a concept by name and describe the modifications you want.</footer>
+  </main>
+  <dialog aria-labelledby="detail-title" data-device="desktop">
+    <div class="dialog-head"><h2 id="detail-title">Concept preview</h2><button id="close" type="button" autofocus>Close</button></div>
+    <p class="dialog-hint">Static visual preview. Scroll to inspect the page; press Escape to close.</p>
+    <div class="dialog-content"><img id="detail-image" alt=""></div>
+  </dialog>
+  <script>
+    const form=document.querySelector('form');
+    const dialog=document.querySelector('dialog');
+    const names={'profile-practice':'Profile & Practice','personal-editorial':'Personal Editorial','work-focus':'Work in Focus'};
+    function selection(){return {device:form.elements.device.value,theme:form.elements.theme.value};}
+    function imagePath(key){const {device,theme}=selection();return `previews/${key}-${device==='mobile'?'mobile-':''}${theme}.png`;}
+    function label(key){const {device,theme}=selection();return `${names[key]} — ${device==='mobile'?'mobile through first project':'complete desktop page'} — ${theme} mode`;}
+    form.addEventListener('submit',event=>event.preventDefault());
+    form.addEventListener('change',()=>{
+      const {device,theme}=selection();
+      document.querySelectorAll('[data-concept]').forEach(article=>{const key=article.dataset.concept;const img=article.querySelector('img');img.src=imagePath(key);img.alt=label(key);});
+      document.querySelector('#state').textContent=`${device==='mobile'?'Mobile':'Desktop'} · ${theme==='light'?'Light':'Dark'} · 3 concepts`;
+    });
+    document.querySelectorAll('.preview').forEach(button=>button.addEventListener('click',()=>{
+      const key=button.closest('[data-concept]').dataset.concept;
+      const img=document.querySelector('#detail-image');
+      img.src=imagePath(key);img.alt=label(key);
+      document.querySelector('#detail-title').textContent=label(key);
+      dialog.dataset.device=selection().device;
+      dialog.showModal();dialog.scrollTop=0;
+    }));
+    document.querySelector('#close').addEventListener('click',()=>dialog.close());
+  </script>
+</body>
+</html>

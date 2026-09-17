@@ -1,0 +1,58 @@
+CONTENT: Use exactly this shared representative content, with no invented achievements, numbers, employers or dates.
+Name: Razib
+Title: Full-stack product engineer
+Intro: Thoughtful interfaces. Reliable systems. Clear communication.
+Supporting intro: From the first product decision to the details that make it work.
+Primary CTA: Let's talk
+Secondary: Résumé — coming soon
+Navigation anchor labels: Work, Experience, Skills, About, Contact.
+Small notice: Design preview · Example projects and experience
+SELECTED WORK
+Intro: A closer look at the problems, decisions, and details behind the work.
+Project 1: Marketplace platform
+Label: Example project
+Summary: A connected experience for customers, sellers, and operations.
+Role: [Your role]
+Contribution: [Your contribution and key decision]
+Stack (example): React · TypeScript · PostgreSQL
+Outcome: [Verified outcome to add]
+Image placeholder label: Product screenshot to add
+Project 2: Document editor
+Label: Example project
+Summary: A focused workspace for writing, previewing, and exporting documents.
+Role: [Your role]
+Contribution: [Your contribution and key decision]
+Stack (example): React · TypeScript · Browser APIs
+Outcome: [Verified outcome to add]
+Image placeholder label: Product screenshot to add
+Project 3: Operations workspace
+Label: Example project
+Summary: Everyday workflows brought together in one clear interface.
+Role: [Your role]
+Contribution: [Your contribution and key decision]
+Stack (example): Next.js · Node.js · PostgreSQL
+Outcome: [Verified outcome to add]
+Image placeholder label: Product screenshot to add
+EXPERIENCE
+[Role / company]    [Dates]
+[Scope, responsibilities, and contribution to add]
+[Earlier role / company]    [Dates]
+[Scope, responsibilities, and contribution to add]
+SKILLS
+Small caption: Representative stack · confirm before publishing
+Frontend: React, Next.js, TypeScript
+Backend: Node.js, REST APIs, PostgreSQL
+Delivery: Git, testing, accessibility
+ABOUT
+I care about how a product feels and how it works.
+[Add a short personal introduction, working style, and interests.]
+CONTACT
+Have a product in mind?
+Let's talk about what you're building.
+Email — add address
+Upwork · GitHub · LinkedIn
+Small note: Profile links to add
+FOOTER
+Thanks for stopping by.
+Signature placeholder
+© 2026 Razib

@@ -1,0 +1,34 @@
+{
+  "light": {
+    "palette": {
+      "background": "FAFAF8",
+      "text": "202428",
+      "secondary": "596168",
+      "accent": "185F73",
+      "control": "7A8288"
+    },
+    "ratios": {
+      "text": 14.94675259555122,
+      "secondary": 6.0261654569348355,
+      "accent": 6.873951922765411,
+      "control": 3.7377596024559434
+    },
+    "buttonRatio": 7.183705170492689
+  },
+  "dark": {
+    "palette": {
+      "background": "191D21",
+      "text": "EEF0F2",
+      "secondary": "ADB5BD",
+      "accent": "89C9DA",
+      "control": "77838C"
+    },
+    "ratios": {
+      "text": 14.835356800514583,
+      "secondary": 8.168588546325667,
+      "accent": 9.225454154306634,
+      "control": 4.365952930635902
+    },
+    "buttonRatio": 9.225454154306634
+  }
+}

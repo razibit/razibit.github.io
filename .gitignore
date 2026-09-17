@@ -1,1 +1,11 @@
 /academic/
+
+# Local browser automation logs, traces, and screenshots
+/.playwright-cli/
+
+# Local OS and editor metadata
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/

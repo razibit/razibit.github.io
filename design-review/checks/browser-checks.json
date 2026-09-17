@@ -1,0 +1,173 @@
+{
+  "browser": "Chrome",
+  "allPreviewStates": [
+    {
+      "images": [
+        {
+          "height": 1672,
+          "loaded": true,
+          "src": "previews/profile-practice-light.png",
+          "width": 941
+        },
+        {
+          "height": 1639,
+          "loaded": true,
+          "src": "previews/personal-editorial-light.png",
+          "width": 959
+        },
+        {
+          "height": 1536,
+          "loaded": true,
+          "src": "previews/work-focus-light.png",
+          "width": 1024
+        }
+      ],
+      "overflow": false,
+      "state": "Desktop · Light · 3 concepts",
+      "width": 1440
+    },
+    {
+      "images": [
+        {
+          "height": 1672,
+          "loaded": true,
+          "src": "previews/profile-practice-dark.png",
+          "width": 941
+        },
+        {
+          "height": 1640,
+          "loaded": true,
+          "src": "previews/personal-editorial-dark.png",
+          "width": 959
+        },
+        {
+          "height": 1536,
+          "loaded": true,
+          "src": "previews/work-focus-dark.png",
+          "width": 1024
+        }
+      ],
+      "overflow": false,
+      "state": "Desktop · Dark · 3 concepts",
+      "width": 1440
+    },
+    {
+      "images": [
+        {
+          "height": 2125,
+          "loaded": true,
+          "src": "previews/profile-practice-mobile-light.png",
+          "width": 740
+        },
+        {
+          "height": 2125,
+          "loaded": true,
+          "src": "previews/personal-editorial-mobile-light.png",
+          "width": 740
+        },
+        {
+          "height": 1855,
+          "loaded": true,
+          "src": "previews/work-focus-mobile-light.png",
+          "width": 848
+        }
+      ],
+      "overflow": false,
+      "state": "Mobile · Light · 3 concepts",
+      "width": 1440
+    },
+    {
+      "images": [
+        {
+          "height": 2126,
+          "loaded": true,
+          "src": "previews/profile-practice-mobile-dark.png",
+          "width": 740
+        },
+        {
+          "height": 2126,
+          "loaded": true,
+          "src": "previews/personal-editorial-mobile-dark.png",
+          "width": 740
+        },
+        {
+          "height": 1855,
+          "loaded": true,
+          "src": "previews/work-focus-mobile-dark.png",
+          "width": 848
+        }
+      ],
+      "overflow": false,
+      "state": "Mobile · Dark · 3 concepts",
+      "width": 1440
+    }
+  ],
+  "responsive": [
+    {
+      "columns": "771.2px",
+      "controls": [
+        {
+          "height": 44,
+          "text": "Desktop · full page",
+          "width": 185.90000915527344
+        },
+        {
+          "height": 44,
+          "text": "Mobile · first project",
+          "width": 195.5375061035156
+        },
+        {
+          "height": 44,
+          "text": "Light",
+          "width": 88.9124984741211
+        },
+        {
+          "height": 44,
+          "text": "Dark",
+          "width": 86.4749984741211
+        }
+      ],
+      "loaded": true,
+      "overflow": false,
+      "width": 834
+    },
+    {
+      "columns": "339.2px",
+      "controls": [
+        {
+          "height": 44,
+          "text": "Desktop · full page",
+          "width": 185.90000915527344
+        },
+        {
+          "height": 44,
+          "text": "Mobile · first project",
+          "width": 195.5375061035156
+        },
+        {
+          "height": 44,
+          "text": "Light",
+          "width": 88.9124984741211
+        },
+        {
+          "height": 44,
+          "text": "Dark",
+          "width": 86.4749984741211
+        }
+      ],
+      "loaded": true,
+      "overflow": false,
+      "width": 390
+    }
+  ],
+  "keyboard": {
+    "escapeCloses": true,
+    "focusReturnsToTrigger": true
+  },
+  "mobileDialog": {
+    "fits390": true,
+    "noOverflow": true
+  },
+  "consoleWarningsOrErrors": [],
+  "environmentNote": "Dark Reader extension recolors gallery chrome; original PNG artifacts are authoritative."
+}

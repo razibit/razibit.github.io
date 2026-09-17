@@ -1,0 +1,376 @@
+{
+  "created": "2026-09-17",
+  "generator": "built-in image_gen",
+  "scope": "static concept review, not a portfolio implementation",
+  "artifacts": [
+    {
+      "file": "previews/personal-editorial-dark.png",
+      "width": 959,
+      "height": 1640,
+      "bytes": 1298776,
+      "sha256": "8150d217352485170bf40fe5b03703dfefb78c029d235ebcdd6e665dd2de462b"
+    },
+    {
+      "file": "previews/personal-editorial-light.png",
+      "width": 959,
+      "height": 1639,
+      "bytes": 1145395,
+      "sha256": "3c8b8daf4e664740b3a34049c5166f7ea2303e34c7cdbb5d4afc5cdeffc38436"
+    },
+    {
+      "file": "previews/personal-editorial-mobile-dark.png",
+      "width": 740,
+      "height": 2126,
+      "bytes": 1352199,
+      "sha256": "0bd0f2ed6e51325dd1879a343b461745da17db0f8cbf9943624b63f0e8d1ed7f"
+    },
+    {
+      "file": "previews/personal-editorial-mobile-light.png",
+      "width": 740,
+      "height": 2125,
+      "bytes": 1223895,
+      "sha256": "e0f7762fd0f21b4738809dab441d76c020d7cee545e4aaa815d669719b0ab338"
+    },
+    {
+      "file": "previews/profile-practice-dark.png",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1396047,
+      "sha256": "e6b1cd3414104333280f951da40f6d1e58ead8a5106bcf30ae91ff28dfc28ad2"
+    },
+    {
+      "file": "previews/profile-practice-light.png",
+      "width": 941,
+      "height": 1672,
+      "bytes": 1300916,
+      "sha256": "257d4a5bf8a02a00973d81c21b01942dad7aa044331a839a5f9e074e4e572962"
+    },
+    {
+      "file": "previews/profile-practice-mobile-dark.png",
+      "width": 740,
+      "height": 2126,
+      "bytes": 1300829,
+      "sha256": "55764b74bba0974f69c0bd2618acbae6ea7304fb87c7e74357129e2742155763"
+    },
+    {
+      "file": "previews/profile-practice-mobile-light.png",
+      "width": 740,
+      "height": 2125,
+      "bytes": 1184285,
+      "sha256": "c56308d5a3eb5e7a22b7283430334d09694c193bb1f44766c9430bd9c8c34601"
+    },
+    {
+      "file": "previews/work-focus-dark.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1510811,
+      "sha256": "c56979b65561682b4f692d38f53a696579b54e8f123a66f89db2744840ccf5dc"
+    },
+    {
+      "file": "previews/work-focus-light.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1365003,
+      "sha256": "71285f0da23c6f61a54b1a3602380519d4abc99ca2047b560b5c26592797a22d"
+    },
+    {
+      "file": "previews/work-focus-mobile-dark.png",
+      "width": 848,
+      "height": 1855,
+      "bytes": 1246499,
+      "sha256": "0fa6595ec992e76490fe6bd725c400cd6cff8bb97f6c98cc4b92ba71bedf1f24"
+    },
+    {
+      "file": "previews/work-focus-mobile-light.png",
+      "width": 848,
+      "height": 1855,
+      "bytes": 1124100,
+      "sha256": "a54a53cb36e00d22ee39e0adb2b805ff7024b2b5a17bd7ab520643b6f204a43b"
+    }
+  ],
+  "localHttpChecks": [
+    {
+      "path": "README.md",
+      "status": 200
+    },
+    {
+      "path": "content.txt",
+      "status": 200
+    },
+    {
+      "path": "index.html",
+      "status": 200
+    },
+    {
+      "path": "previews/personal-editorial-dark.png",
+      "status": 200
+    },
+    {
+      "path": "previews/personal-editorial-light.png",
+      "status": 200
+    },
+    {
+      "path": "previews/personal-editorial-mobile-dark.png",
+      "status": 200
+    },
+    {
+      "path": "previews/personal-editorial-mobile-light.png",
+      "status": 200
+    },
+    {
+      "path": "previews/profile-practice-dark.png",
+      "status": 200
+    },
+    {
+      "path": "previews/profile-practice-light.png",
+      "status": 200
+    },
+    {
+      "path": "previews/profile-practice-mobile-dark.png",
+      "status": 200
+    },
+    {
+      "path": "previews/profile-practice-mobile-light.png",
+      "status": 200
+    },
+    {
+      "path": "previews/work-focus-dark.png",
+      "status": 200
+    },
+    {
+      "path": "previews/work-focus-light.png",
+      "status": 200
+    },
+    {
+      "path": "previews/work-focus-mobile-dark.png",
+      "status": 200
+    },
+    {
+      "path": "previews/work-focus-mobile-light.png",
+      "status": 200
+    },
+    {
+      "path": "prompts.json",
+      "status": 200
+    }
+  ],
+  "browser": {
+    "browser": "Chrome",
+    "allPreviewStates": [
+      {
+        "images": [
+          {
+            "height": 1672,
+            "loaded": true,
+            "src": "previews/profile-practice-light.png",
+            "width": 941
+          },
+          {
+            "height": 1639,
+            "loaded": true,
+            "src": "previews/personal-editorial-light.png",
+            "width": 959
+          },
+          {
+            "height": 1536,
+            "loaded": true,
+            "src": "previews/work-focus-light.png",
+            "width": 1024
+          }
+        ],
+        "overflow": false,
+        "state": "Desktop \u00c2\u00b7 Light \u00c2\u00b7 3 concepts",
+        "width": 1440
+      },
+      {
+        "images": [
+          {
+            "height": 1672,
+            "loaded": true,
+            "src": "previews/profile-practice-dark.png",
+            "width": 941
+          },
+          {
+            "height": 1640,
+            "loaded": true,
+            "src": "previews/personal-editorial-dark.png",
+            "width": 959
+          },
+          {
+            "height": 1536,
+            "loaded": true,
+            "src": "previews/work-focus-dark.png",
+            "width": 1024
+          }
+        ],
+        "overflow": false,
+        "state": "Desktop \u00c2\u00b7 Dark \u00c2\u00b7 3 concepts",
+        "width": 1440
+      },
+      {
+        "images": [
+          {
+            "height": 2125,
+            "loaded": true,
+            "src": "previews/profile-practice-mobile-light.png",
+            "width": 740
+          },
+          {
+            "height": 2125,
+            "loaded": true,
+            "src": "previews/personal-editorial-mobile-light.png",
+            "width": 740
+          },
+          {
+            "height": 1855,
+            "loaded": true,
+            "src": "previews/work-focus-mobile-light.png",
+            "width": 848
+          }
+        ],
+        "overflow": false,
+        "state": "Mobile \u00c2\u00b7 Light \u00c2\u00b7 3 concepts",
+        "width": 1440
+      },
+      {
+        "images": [
+          {
+            "height": 2126,
+            "loaded": true,
+            "src": "previews/profile-practice-mobile-dark.png",
+            "width": 740
+          },
+          {
+            "height": 2126,
+            "loaded": true,
+            "src": "previews/personal-editorial-mobile-dark.png",
+            "width": 740
+          },
+          {
+            "height": 1855,
+            "loaded": true,
+            "src": "previews/work-focus-mobile-dark.png",
+            "width": 848
+          }
+        ],
+        "overflow": false,
+        "state": "Mobile \u00c2\u00b7 Dark \u00c2\u00b7 3 concepts",
+        "width": 1440
+      }
+    ],
+    "responsive": [
+      {
+        "columns": "771.2px",
+        "controls": [
+          {
+            "height": 44,
+            "text": "Desktop \u00c2\u00b7 full page",
+            "width": 185.90000915527344
+          },
+          {
+            "height": 44,
+            "text": "Mobile \u00c2\u00b7 first project",
+            "width": 195.5375061035156
+          },
+          {
+            "height": 44,
+            "text": "Light",
+            "width": 88.9124984741211
+          },
+          {
+            "height": 44,
+            "text": "Dark",
+            "width": 86.4749984741211
+          }
+        ],
+        "loaded": true,
+        "overflow": false,
+        "width": 834
+      },
+      {
+        "columns": "339.2px",
+        "controls": [
+          {
+            "height": 44,
+            "text": "Desktop \u00c2\u00b7 full page",
+            "width": 185.90000915527344
+          },
+          {
+            "height": 44,
+            "text": "Mobile \u00c2\u00b7 first project",
+            "width": 195.5375061035156
+          },
+          {
+            "height": 44,
+            "text": "Light",
+            "width": 88.9124984741211
+          },
+          {
+            "height": 44,
+            "text": "Dark",
+            "width": 86.4749984741211
+          }
+        ],
+        "loaded": true,
+        "overflow": false,
+        "width": 390
+      }
+    ],
+    "keyboard": {
+      "escapeCloses": true,
+      "focusReturnsToTrigger": true
+    },
+    "mobileDialog": {
+      "fits390": true,
+      "noOverflow": true
+    },
+    "consoleWarningsOrErrors": [],
+    "environmentNote": "Dark Reader extension recolors gallery chrome; original PNG artifacts are authoritative."
+  },
+  "contrastTokens": {
+    "light": {
+      "palette": {
+        "background": "FAFAF8",
+        "text": "202428",
+        "secondary": "596168",
+        "accent": "185F73",
+        "control": "7A8288"
+      },
+      "ratios": {
+        "text": 14.94675259555122,
+        "secondary": 6.0261654569348355,
+        "accent": 6.873951922765411,
+        "control": 3.7377596024559434
+      },
+      "buttonRatio": 7.183705170492689
+    },
+    "dark": {
+      "palette": {
+        "background": "191D21",
+        "text": "EEF0F2",
+        "secondary": "ADB5BD",
+        "accent": "89C9DA",
+        "control": "77838C"
+      },
+      "ratios": {
+        "text": 14.835356800514583,
+        "secondary": 8.168588546325667,
+        "accent": 9.225454154306634,
+        "control": 4.365952930635902
+      },
+      "buttonRatio": 9.225454154306634
+    }
+  },
+  "visualReview": {
+    "allDesktopSectionsPresent": true,
+    "allMobileViewsIncludeFirstProject": true,
+    "placeholderDatesAndBiographyCorrected": true,
+    "rejectedDraftsExcluded": true
+  },
+  "limitations": [
+    "Raster output dimensions differ from logical design targets.",
+    "Generated colors and typefaces are approximate; token contrast is not pixel-level WCAG conformance.",
+    "Portfolio responsive behavior, keyboard navigation, and screen-reader functionality remain unimplemented pending concept selection.",
+    "Tablet behavior is specified in review notes, not rendered as a separate portfolio artifact."
+  ]
+}
