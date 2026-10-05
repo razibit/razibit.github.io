@@ -45,6 +45,8 @@ Longer project detail in GitHub-Flavored Markdown.
 
 Project `image`, `repository`, `demo`, and `link` fields are optional. Local images must exist below `public/` and be referenced with a root-relative path such as `/images/example-project.png`.
 
+`order` is an optional nonnegative integer: lower values appear first. `featured: true` displays a full homepage card; `featured: false` displays a compact entry under More projects. Both have detail pages. Omit `image` for a text-only card. Case-study timelines, status, collaborators, grouped stack, results, limitations, and visuals belong in the Markdown body rather than invented metadata fields. Use `demo` only for an actual interactive demo; use `link` for a static showcase.
+
 ### Blog post
 
 ```markdown

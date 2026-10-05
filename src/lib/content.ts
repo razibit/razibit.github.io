@@ -56,6 +56,7 @@ export interface ProjectMeta extends ContentMeta {
   repository?: string;
   demo?: string;
   featured?: boolean;
+  order?: number;
 }
 
 export interface ExperienceMeta extends ContentMeta {
@@ -169,7 +170,8 @@ export function getNews(): ContentDocument<NewsMeta>[] {
 }
 
 export function getProjects(): ContentDocument<ProjectMeta>[] {
-  return getCollection<ProjectMeta>("projects");
+  return getCollection<ProjectMeta>("projects").sort((a, b) =>
+    (a.meta.order ?? 100) - (b.meta.order ?? 100) || a.slug.localeCompare(b.slug));
 }
 
 export function getExperience(): ContentDocument<ExperienceMeta>[] {

@@ -209,7 +209,7 @@ try {
 
   checkDocs("posts", getCollection("posts"), z.object({ title, date, ...optionalFields }).passthrough());
   checkDocs("news", getCollection("news"), z.object({ title: title.optional(), date, ...optionalFields }).passthrough());
-  checkDocs("projects", getProjects(), z.object({ title, role: z.string().optional(), contribution: z.string().optional(), stack: z.union([z.string(), z.array(z.string())]).optional(), outcome: z.string().optional(), ...optionalFields }).passthrough());
+  checkDocs("projects", getProjects(), z.object({ title, order: z.number().int().nonnegative().optional(), role: z.string().optional(), contribution: z.string().optional(), stack: z.union([z.string(), z.array(z.string())]).optional(), outcome: z.string().optional(), ...optionalFields }).passthrough());
   checkDocs("experience", getExperience(), z.object({ title, dates: z.string().optional(), summary: z.string().optional(), ...optionalFields }).passthrough());
   checkDocs("materials", getMaterials(), z.object({ title, type: z.string().optional(), date: date.optional(), ...optionalFields }).passthrough());
   checkDocs("pages", getPages(), z.object({ title, ...optionalFields }).passthrough());

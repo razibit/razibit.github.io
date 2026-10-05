@@ -7,6 +7,7 @@ last_updated = "September 2026"
 [author]
 name = "Razib"
 title = "Full-stack product engineer"
+avatar = "/images/headshot.png"
 introduction = "Thoughtful interfaces.\nReliable systems.\nClear communication."
 positioning = "From the first product decision to the details that make it work."
 email = ""

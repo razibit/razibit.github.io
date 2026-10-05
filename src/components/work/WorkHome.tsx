@@ -25,6 +25,7 @@ export default function WorkHome({
   const sectionItems = config.navigation.filter((item) => item.type === "section");
   const pageItems = config.navigation.filter((item) => item.type === "page");
   const featuredProjects = projects.filter((project) => project.meta.featured !== false);
+  const additionalProjects = projects.filter((project) => project.meta.featured === false);
   const featuredExperience = experience.filter((item) => item.meta.featured !== false);
 
   return (
@@ -58,13 +59,13 @@ export default function WorkHome({
 
       <main id="content" className="content" tabIndex={-1}>
         <section id="work" className="section work" aria-labelledby="work-heading" tabIndex={-1}>
-          <p className="preview-note">Content-driven portfolio</p>
+          <p className="preview-note">Products, systems, and research</p>
           <h2 id="work-heading">Selected work</h2>
           <p className="section-intro">A closer look at the problems, decisions, and details behind the work.</p>
           <div className="projects">
             {featuredProjects.map((project) => (
-              <article className="project" key={project.slug} aria-labelledby={`${project.slug}-heading`}>
-                {project.meta.image ? <img className="project-image" src={publicAssetUrl(project.meta.image)} alt="" /> : <div className="project-image placeholder" role="img" aria-label={`${project.meta.title} screenshot placeholder`}>Product screenshot<br />to add</div>}
+              <article className={`project${project.meta.image ? "" : " project-text"}`} key={project.slug} aria-labelledby={`${project.slug}-heading`}>
+                {project.meta.image && <img className="project-image" src={publicAssetUrl(project.meta.image)} alt="" />}
                 <div className="project-copy">
                   <p className="project-label">{project.meta.label ?? "Project"}</p>
                   <h3 id={`${project.slug}-heading`}><Link href={routeUrl(`/work/${project.slug}/`)}>{project.meta.title}</Link></h3>
@@ -80,6 +81,7 @@ export default function WorkHome({
               </article>
             ))}
           </div>
+          {additionalProjects.length > 0 && <div className="additional-projects"><h3>More projects</h3><ul>{additionalProjects.map((project) => <li key={project.slug}><Link href={routeUrl(`/work/${project.slug}/`)}>{project.meta.title}</Link><p>{project.meta.summary}</p></li>)}</ul></div>}
         </section>
 
         <section id="experience" className="section" aria-labelledby="experience-heading" tabIndex={-1}>
