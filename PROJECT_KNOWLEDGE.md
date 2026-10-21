@@ -112,6 +112,17 @@ Keep entries factual, concise, and dated where timing matters. Prefer confirmed 
 
 ## Update log
 
+### 2026-10-22 — Work-site header navigation
+
+- Added a compact sticky header across the work-site routes, with navigation ordered Work, Experience, Skills, About, Contact, News, Blog. Section links return to their home-page fragments; Blog is marked current on its listing and post routes.
+- The header uses the existing Inter typography and theme variables, exposes the current section through `aria-current`, and collapses to a keyboard-operable menu below 640px. Escape closes the menu and restores focus to its button; reduced-motion preferences disable smooth scrolling and transitions.
+- Local build, content validation, linting, and responsive browser checks are recorded with the implementation handoff. No deployment or Git history operation was performed.
+
+### 2026-10-22 — Header theme toggle
+
+- Replaced the profile-column Light/Dark selector with a single sun/moon button at the far right of the global header. The moon appears in light mode and the sun appears in dark mode to show the next action.
+- The control keeps the `portfolio-theme` localStorage preference, uses the existing pre-render script for saved or operating-system preferences, and honors reduced-motion settings for theme transitions.
+
 ### 2026-09-17 — Selected concept implementation
 
 - The user selected Profile & Practice and authorized implementation, fulfilling the earlier concept-selection gate.

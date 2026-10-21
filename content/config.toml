@@ -51,13 +51,13 @@ target = "contact"
 href = "/#contact"
 
 [[navigation]]
-title = "Blog"
-type = "page"
-target = "blog"
-href = "/blog/"
-
-[[navigation]]
 title = "News"
 type = "section"
 target = "news"
 href = "/#news"
+
+[[navigation]]
+title = "Blog"
+type = "page"
+target = "blog"
+href = "/blog/"

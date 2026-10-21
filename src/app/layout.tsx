@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { getSiteConfig } from "@/lib/content";
+import HeaderNavigation from "@/components/work/HeaderNavigation";
 
 const config = getSiteConfig();
 
@@ -16,7 +17,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         <script dangerouslySetInnerHTML={{ __html: `(() => { let t = null; try { t = localStorage.getItem('portfolio-theme'); } catch {} const dark = t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches); document.documentElement.dataset.theme = dark ? 'dark' : 'light'; document.documentElement.dataset.themeSource = t ? 'explicit' : 'system'; })();` }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#content">Skip to content</a>
+        <HeaderNavigation items={config.navigation} />
+        <div id="content" tabIndex={-1}>{children}</div>
+      </body>
     </html>
   );
 }

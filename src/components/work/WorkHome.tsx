@@ -3,7 +3,6 @@ import { Markdown } from "@/lib/markdown";
 import { publicAssetUrl, routeUrl, type ContentDocument, type ExperienceMeta, type MaterialMeta, type NewsMeta, type ProjectMeta, type SiteConfig } from "@/lib/content";
 import type { SkillsContent } from "@/types/content";
 import NewsList from "@/components/shared/NewsList";
-import { SectionNav, ThemeControls } from "./ThemeControls";
 
 export default function WorkHome({
   config,
@@ -22,17 +21,14 @@ export default function WorkHome({
   news: ContentDocument<NewsMeta>[];
   skills: SkillsContent;
 }) {
-  const sectionItems = config.navigation.filter((item) => item.type === "section");
-  const pageItems = config.navigation.filter((item) => item.type === "page");
   const featuredProjects = projects.filter((project) => project.meta.featured !== false);
   const additionalProjects = projects.filter((project) => project.meta.featured === false);
   const featuredExperience = experience.filter((item) => item.meta.featured !== false);
 
   return (
     <>
-      <a className="skip-link" href="#content">Skip to content</a>
       <div className="portfolio">
-      <header className="profile-column">
+      <aside className="profile-column" aria-label="Profile">
         <div className="profile" id="profile">
           {config.author.avatar ? <img className="headshot" src={publicAssetUrl(config.author.avatar)} alt={`${config.author.name} profile`} /> : <div className="headshot placeholder" role="img" aria-label="Headshot placeholder">Headshot<br />to add</div>}
           <div className="identity">
@@ -45,19 +41,14 @@ export default function WorkHome({
             <a className="contact-action" href="#contact">Let’s talk</a>
             {config.author.resume_url ? <a className="resume-link" href={config.author.resume_url}>Résumé</a> : <span className="resume-placeholder">Résumé <span>— coming soon</span></span>}
           </div>
-          <SectionNav items={sectionItems} />
-          {pageItems.length > 0 && <nav className="page-nav" aria-label="More pages">{pageItems.map((item) => <Link key={item.target} href={routeUrl(item.href || `/${item.target}/`)}>{item.title}</Link>)}</nav>}
-          <div className="profile-bottom">
-            <ThemeControls />
-            <div className="social-links" aria-label="Professional profiles">
-              {config.social?.github && <a className="social-icon" href={config.social.github} target="_blank" rel="noreferrer" aria-label="GitHub profile">GitHub</a>}
-              {config.social?.linkedin && <a className="social-icon" href={config.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn profile">LinkedIn</a>}
-            </div>
+          <div className="social-links" aria-label="Professional profiles">
+            {config.social?.github && <a className="social-icon" href={config.social.github} target="_blank" rel="noreferrer" aria-label="GitHub profile">GitHub</a>}
+            {config.social?.linkedin && <a className="social-icon" href={config.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn profile">LinkedIn</a>}
           </div>
         </div>
-      </header>
+      </aside>
 
-      <main id="content" className="content" tabIndex={-1}>
+      <main className="content" tabIndex={-1}>
         <section id="work" className="section work" aria-labelledby="work-heading" tabIndex={-1}>
           <p className="preview-note">Products, systems, and research</p>
           <h2 id="work-heading">Selected work</h2>
