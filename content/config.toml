@@ -11,7 +11,7 @@ avatar = "/images/headshot.png"
 introduction = "Thoughtful interfaces.\nReliable systems.\nClear communication."
 positioning = "From the first product decision to the details that make it work."
 email = "rajibdeb7t@gmail.com"
-resume_url = "/resume.pdf"
+resume_url = ""
 
 [social]
 github = "https://github.com/razibit"
