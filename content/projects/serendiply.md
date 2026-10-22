@@ -1,5 +1,5 @@
 ---
-title: "Serendiply — Anonymous Text and Video Chat with Interest-Based Matching"
+title: "Serendiply - Anonymous Text and Video Chat with Interest-Based Matching"
 label: "Real-time communication"
 summary: "A web chat platform combining WebRTC video, Redis-backed matching, real-time messaging, and reporting workflows."
 role: "Full-stack implementation contributor"

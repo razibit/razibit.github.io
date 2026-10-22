@@ -1,5 +1,5 @@
 ---
-title: "Mini Compiler — C, Flex, and Bison Front End with a Browser Interface"
+title: "Mini Compiler - C, Flex, and Bison Front End with a Browser Interface"
 label: "Compiler/course project"
 summary: "An educational compiler front end with scoped semantic checks, three-address code, and a Flask interface over the same executable."
 role: "Team implementation contributor"

@@ -123,6 +123,31 @@ export default function ProjectsGrid({ projects }: { projects: ProjectCardData[]
 
   return (
     <>
+      <div className={styles.headingRow}>
+        <h2 className={styles.heading} id="work-heading">Selected work</h2>
+        {projects.length > INITIAL_PROJECT_COUNT && (
+          <button
+            className={styles.expandToggle}
+            type="button"
+            aria-expanded={showAll}
+            aria-controls={gridId}
+            onClick={() => setShowAll((value) => !value)}
+          >
+            {showAll ? "Show Less" : "All Projects"}
+            <svg className={styles.chevron} aria-hidden="true" focusable="false" viewBox="0 0 12 12">
+              <path
+                d={showAll ? "M2.25 7.5 6 3.75 9.75 7.5" : "M2.25 4.5 6 8.25 9.75 4.5"}
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </button>
+        )}
+      </div>
+      <p className="section-intro">A closer look at the problems, decisions, and details behind the work.</p>
       <div className={styles.grid} id={gridId}>
         {visibleProjects.map((project) => {
           const detailsId = `${gridId}-${project.slug}-details`;
@@ -153,19 +178,6 @@ export default function ProjectsGrid({ projects }: { projects: ProjectCardData[]
           );
         })}
       </div>
-      {projects.length > INITIAL_PROJECT_COUNT && (
-        <div className={styles.showMoreContainer}>
-          <button
-            className={styles.showMoreButton}
-            type="button"
-            aria-expanded={showAll}
-            aria-controls={gridId}
-            onClick={() => setShowAll((value) => !value)}
-          >
-            {showAll ? "Show Less" : "Show More"}
-          </button>
-        </div>
-      )}
     </>
   );
 }

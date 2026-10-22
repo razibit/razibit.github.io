@@ -16,6 +16,7 @@ resume_url = ""
 [social]
 github = "https://github.com/razibit"
 linkedin = "https://www.linkedin.com/in/rajibdab/"
+x = "https://x.com/razi_bit"
 
 [features]
 one_page_home = true

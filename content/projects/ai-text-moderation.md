@@ -1,5 +1,5 @@
 ---
-title: "AI Text Moderation — Five-Class Chat Classification with BERT-Tiny"
+title: "AI Text Moderation - Five-Class Chat Classification with BERT-Tiny"
 label: "Applied NLP course project"
 summary: "A five-class moderation experiment with weighted BERT-Tiny training, baseline comparison, and local Flask/browser demonstrations."
 role: "Team pipeline, training, and demo contributor"

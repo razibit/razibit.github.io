@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         <a className="skip-link" href="#content">Skip to content</a>
-        <HeaderNavigation items={config.navigation} />
+        <HeaderNavigation items={config.navigation} name={config.author.name} />
         <div id="content" tabIndex={-1}>{children}</div>
       </body>
     </html>

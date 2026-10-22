@@ -1,5 +1,5 @@
 ---
-title: "iLoveMd — Browser-Based Markdown Editing, Annotation, and Document Export"
+title: "iLoveMd - Browser-Based Markdown Editing, Annotation, and Document Export"
 label: "Developer and writing tool"
 summary: "A local-first browser workspace with Markdown editing, rendered review, revision-aware annotations, and document exports."
 role: "Workspace implementation contributor"

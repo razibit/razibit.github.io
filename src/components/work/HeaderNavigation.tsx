@@ -5,11 +5,20 @@ import { usePathname } from "next/navigation";
 import type { NavigationItem } from "@/lib/content";
 import { ThemeControls } from "./ThemeControls";
 
-const DESKTOP_QUERY = "(min-width: 768px)";
-const MOBILE_QUERY = "(max-width: 767px)";
+const DESKTOP_QUERY = "(min-width: 1024px)";
+const MOBILE_QUERY = "(max-width: 1023px)";
 const HEADER_OFFSET = 80;
+const PRONUNCIATION_AUDIO_URL = "/audio/name-pronunciation.mp3";
+const PRONUNCIATION_ERROR_MESSAGE =
+  "Name pronunciation audio could not be played. Please try again.";
 
-export default function HeaderNavigation({ items }: { items: NavigationItem[] }) {
+export default function HeaderNavigation({
+  items,
+  name,
+}: {
+  items: NavigationItem[];
+  name: string;
+}) {
   const pathname = usePathname() ?? "/";
   const currentPath = pathname.replace(/\/+$/, "") || "/";
   const isHome = currentPath === "/";
@@ -17,7 +26,30 @@ export default function HeaderNavigation({ items }: { items: NavigationItem[] })
     () => items.find((item) => item.type === "section")?.target ?? "",
   );
   const [menuOpen, setMenuOpen] = useState(false);
+  const [audioError, setAudioError] = useState("");
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const playbackAttemptRef = useRef(0);
+
+  const handleAudioError = () => setAudioError(PRONUNCIATION_ERROR_MESSAGE);
+
+  const playNamePronunciation = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const playbackAttempt = ++playbackAttemptRef.current;
+    setAudioError("");
+    try {
+      if (!audio.hasAttribute("src")) audio.src = PRONUNCIATION_AUDIO_URL;
+      audio.pause();
+      audio.currentTime = 0;
+      void audio.play().catch(() => {
+        if (playbackAttempt === playbackAttemptRef.current) handleAudioError();
+      });
+    } catch {
+      handleAudioError();
+    }
+  };
 
   useEffect(() => {
     if (!isHome) {
@@ -118,6 +150,36 @@ export default function HeaderNavigation({ items }: { items: NavigationItem[] })
   return (
     <header className="site-header">
       <div className="site-header-inner">
+        <div className="site-header-brand">
+          <span className="site-header-name">{name}</span>
+          <button
+            className="name-pronunciation-button"
+            type="button"
+            aria-label="Play name pronunciation"
+            onClick={playNamePronunciation}
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 9v6h4l5 4V5L7 9H3Z"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M16 9a5 5 0 0 1 0 6m3-9a9 9 0 0 1 0 12"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+          <span className="site-header-audio-status" role="status" aria-live="polite" aria-atomic="true">
+            {audioError}
+          </span>
+          <audio ref={audioRef} preload="none" hidden onError={handleAudioError} />
+        </div>
+
         <button
           ref={menuButtonRef}
           className="nav-menu-toggle"

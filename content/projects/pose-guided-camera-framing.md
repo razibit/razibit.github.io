@@ -1,5 +1,5 @@
 ---
-title: "Pose-Guided Camera Framing — Computer Vision Guidance for Solo Photography"
+title: "Pose-Guided Camera Framing - Computer Vision Guidance for Solo Photography"
 label: "Computer vision research"
 summary: "A multi-task vision prototype that combines image features and human pose to assess framing and generate camera-adjustment instructions."
 role: "Project lead and primary researcher/developer"

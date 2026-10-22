@@ -1,5 +1,5 @@
 ---
-title: "DenZo — Multi-Vendor E-Commerce Marketplace with Payments and Logistics"
+title: "Denzo - Multi-Vendor E-Commerce Marketplace with Payments and Logistics"
 label: "Commerce platform"
 summary: "A multi-portal marketplace that coordinates seller-owned catalogs, server-authoritative checkout, verified payments, and courier fulfillment."
 role: "Solo founding engineer and CEO"

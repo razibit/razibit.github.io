@@ -1,5 +1,5 @@
 ---
-title: "Mess Meal Management — Shared-Household Meal Planning and Expense Tracking"
+title: "Mess Meal Management - Shared-Household Meal Planning and Expense Tracking"
 label: "Household operations PWA"
 summary: "A React and Supabase PWA for meal registration, shared expenses, deposits, inventory, and household reporting."
 role: "Application and database implementation"

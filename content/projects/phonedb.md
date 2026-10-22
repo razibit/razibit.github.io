@@ -1,5 +1,5 @@
 ---
-title: "PhoneDB — Smartphone Research and Comparison with a Custom Data Pipeline"
+title: "PhoneDB - Smartphone Research and Comparison with a Custom Data Pipeline"
 label: "Data-backed web application"
 summary: "A smartphone catalog and four-device comparison app backed by MySQL and a separately built Python collection pipeline."
 role: "Scraper creator and application engineering contributor"

@@ -1,5 +1,5 @@
 ---
-title: "Smartphone Specs Scraper — Python Data Collection for Structured Phone Catalogs"
+title: "Smartphone Specs Scraper - Python Data Collection for Structured Phone Catalogs"
 label: "Data collection tool"
 summary: "A Python CLI for discovering smartphone listings, extracting specifications and prices, and exporting validated CSV/JSON."
 role: "Scraper creator"
