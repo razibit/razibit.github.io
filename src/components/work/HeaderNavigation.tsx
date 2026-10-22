@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import type { NavigationItem } from "@/lib/content";
 import { ThemeControls } from "./ThemeControls";
 
-const DESKTOP_QUERY = "(min-width: 640px)";
-const MOBILE_QUERY = "(max-width: 639px)";
+const DESKTOP_QUERY = "(min-width: 768px)";
+const MOBILE_QUERY = "(max-width: 767px)";
 const HEADER_OFFSET = 80;
 
 export default function HeaderNavigation({ items }: { items: NavigationItem[] }) {
@@ -130,6 +130,8 @@ export default function HeaderNavigation({ items }: { items: NavigationItem[] })
           {menuOpen ? "Close" : "Menu"}
         </button>
 
+        <ThemeControls />
+
         <nav
           className="primary-nav"
           id="primary-navigation"
@@ -162,9 +164,32 @@ export default function HeaderNavigation({ items }: { items: NavigationItem[] })
                 </li>
               );
             })}
+            <li key="academic-portfolio">
+              <a
+                className="academic-link"
+                href="https://razibit.github.io/academic/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Academic portfolio (opens in a new tab)"
+                onClick={() => {
+                  setMenuOpen(false);
+                  if (window.matchMedia(MOBILE_QUERY).matches) menuButtonRef.current?.focus();
+                }}
+              >
+                <span>Academic</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M14 3h7v7m0-7L10 14m8-1v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
           </ul>
         </nav>
-        <ThemeControls />
       </div>
     </header>
   );

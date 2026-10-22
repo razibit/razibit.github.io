@@ -2,10 +2,10 @@
 title = "Razib — Full-stack product engineer"
 description = "Razib — full-stack product engineer. Selected work, experience, and a thoughtful approach to building software."
 favicon = "/favicon.svg"
-last_updated = "September 2026"
+last_updated = "October 2026"
 
 [author]
-name = "Razib"
+name = "Rajib Dab"
 title = "Full-stack product engineer"
 avatar = "/images/headshot.png"
 introduction = "Thoughtful interfaces.\nReliable systems.\nClear communication."
@@ -21,7 +21,7 @@ linkedin = ""
 one_page_home = true
 
 [[navigation]]
-title = "Work"
+title = "Projects"
 type = "section"
 target = "work"
 href = "/#work"
