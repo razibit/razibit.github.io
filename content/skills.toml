@@ -1,13 +1,40 @@
-note = "Representative stack · confirm before publishing"
+# Proposed replacement for work-portfolio content/skills.toml
+# Technology-only badge labels. Core skills first; add specialized items to project pages.
+# Review visibility and self-attribution before publishing.
+note = "Technologies used across software, systems and research projects"
+
+[[groups]]
+name = "Languages"
+items = ["TypeScript", "JavaScript", "Python", "SQL", "C", "C++", "Java"]
 
 [[groups]]
 name = "Frontend"
-items = ["React", "Next.js", "TypeScript"]
+items = ["React", "Next.js", "Tailwind CSS", "Vite"]
 
 [[groups]]
 name = "Backend"
-items = ["Node.js", "REST APIs", "PostgreSQL"]
+items = ["Node.js", "NestJS", "Express", "FastAPI", "Flask", "REST API", "JWT Auth"]
 
 [[groups]]
-name = "Delivery"
-items = ["Git", "Testing", "Accessibility"]
+name = "Databases"
+items = ["PostgreSQL", "MySQL", "SQLite", "Redis", "Supabase", "MongoDB"]
+
+[[groups]]
+name = "Cloud & DevOps"
+items = ["Azure Container Apps", "Google Cloud Run", "Cloud SQL", "Cloudflare R2", "Docker", "GitHub Actions", "Git", "CI/CD"]
+
+[[groups]]
+name = "Real-Time & Integrations"
+items = ["WebRTC", "Socket.IO", "WebSockets", "SSLCommerz", "Pathao"]
+
+[[groups]]
+name = "AI & Machine Learning"
+items = ["PyTorch", "scikit-learn", "Hugging Face Transformers", "ONNX"]
+
+[[groups]]
+name = "Data & Automation"
+items = ["Beautiful Soup", "requests", "pandas", "NumPy"]
+
+[[groups]]
+name = "Testing"
+items = ["Playwright", "pytest", "Jest", "Vitest", "React Testing Library"]

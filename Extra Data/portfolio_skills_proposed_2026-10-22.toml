@@ -1,0 +1,44 @@
+# Proposed replacement for work-portfolio content/skills.toml
+# Technology-only badge labels. Core skills first; add specialized items to project pages.
+# Review visibility and self-attribution before publishing.
+note = "Technologies used across software, systems and research projects"
+
+[[groups]]
+name = "Languages"
+items = ["TypeScript", "JavaScript", "Python", "SQL", "Rust", "C", "C++", "C#", "Java"]
+
+[[groups]]
+name = "Frontend"
+items = ["React", "Next.js", "Tailwind CSS", "Vite", "Zustand", "TanStack Query", "CodeMirror"]
+
+[[groups]]
+name = "Backend"
+items = ["Node.js", "NestJS", "Express", "FastAPI", "Flask"]
+
+[[groups]]
+name = "Databases"
+items = ["PostgreSQL", "MySQL", "SQLite", "Redis", "Supabase", "MongoDB", "IndexedDB"]
+
+[[groups]]
+name = "Cloud & DevOps"
+items = ["Azure Container Apps", "Azure Service Bus", "Cloudflare R2", "Cloudflare Workers", "Docker", "GitHub Actions", "Git", "pnpm", "Turborepo"]
+
+[[groups]]
+name = "Real-Time & Integrations"
+items = ["WebRTC", "Socket.IO", "WebSockets", "SSLCommerz", "Pathao"]
+
+[[groups]]
+name = "AI & Machine Learning"
+items = ["PyTorch", "scikit-learn", "Hugging Face Transformers", "MediaPipe", "ONNX", "ONNX Runtime Web"]
+
+[[groups]]
+name = "Data & Automation"
+items = ["Beautiful Soup", "requests", "lxml", "pandas", "NumPy", "NLTK"]
+
+[[groups]]
+name = "Testing"
+items = ["Playwright", "pytest", "Jest", "Vitest", "React Testing Library"]
+
+[[groups]]
+name = "Desktop & Systems"
+items = ["Electron", ".NET", "WPF", "Java Swing", "GTK", "Flex", "Bison"]

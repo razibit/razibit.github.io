@@ -130,8 +130,6 @@ export default function HeaderNavigation({ items }: { items: NavigationItem[] })
           {menuOpen ? "Close" : "Menu"}
         </button>
 
-        <ThemeControls />
-
         <nav
           className="primary-nav"
           id="primary-navigation"
@@ -164,6 +162,9 @@ export default function HeaderNavigation({ items }: { items: NavigationItem[] })
                 </li>
               );
             })}
+            <li className="theme-control-item" key="theme-control">
+              <ThemeControls />
+            </li>
             <li key="academic-portfolio">
               <a
                 className="academic-link"

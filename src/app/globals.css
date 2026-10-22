@@ -112,6 +112,12 @@ a:active,
   flex: 0 0 14px;
 }
 
+@media (min-width: 768px) {
+  .primary-nav-list .theme-control-item {
+    margin-inline: -12px;
+  }
+}
+
 @keyframes academic-link-shimmer {
   0%,
   70%,

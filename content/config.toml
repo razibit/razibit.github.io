@@ -1,6 +1,6 @@
 [site]
-title = "Razib — Full-stack product engineer"
-description = "Razib — full-stack product engineer. Selected work, experience, and a thoughtful approach to building software."
+title = "Rajib Dab — Full-stack product engineer"
+description = "Rajib Dab — full-stack product engineer. Selected work, experience, and a thoughtful approach to building software."
 favicon = "/favicon.svg"
 last_updated = "October 2026"
 
@@ -10,12 +10,12 @@ title = "Full-stack product engineer"
 avatar = "/images/headshot.png"
 introduction = "Thoughtful interfaces.\nReliable systems.\nClear communication."
 positioning = "From the first product decision to the details that make it work."
-email = ""
-resume_url = ""
+email = "rajibdeb7t@gmail.com"
+resume_url = "/resume.pdf"
 
 [social]
-github = ""
-linkedin = ""
+github = "https://github.com/razibit"
+linkedin = "https://www.linkedin.com/in/rajibdab/"
 
 [features]
 one_page_home = true
