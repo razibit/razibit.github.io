@@ -2,6 +2,11 @@
 title: "Mini Compiler - C, Flex, and Bison Front End with a Browser Interface"
 label: "Compiler/course project"
 summary: "An educational compiler front end with scoped semantic checks, three-address code, and a Flask interface over the same executable."
+images:
+  - src: /images/projects/mini-compiler-overview.webp
+    alt: "Mini Compiler command-line overview"
+  - src: /images/projects/mini-compiler-interface.webp
+    alt: "Mini Compiler browser interface"
 role: "Team implementation contributor"
 contribution: "Initial compiler front end, Flask interface, WSL path, and documentation."
 stack: "C · Flex · Bison · Flask · WSL"

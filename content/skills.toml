@@ -29,12 +29,8 @@ items = ["WebRTC", "Socket.IO", "WebSockets", "SSLCommerz", "Pathao"]
 
 [[groups]]
 name = "AI & Machine Learning"
-items = ["PyTorch", "scikit-learn", "Hugging Face Transformers", "ONNX"]
+items = ["PyTorch", "scikit-learn", "ONNX"]
 
 [[groups]]
 name = "Data & Automation"
 items = ["Beautiful Soup", "requests", "pandas", "NumPy"]
-
-[[groups]]
-name = "Testing"
-items = ["Playwright", "pytest", "Jest", "Vitest", "React Testing Library"]

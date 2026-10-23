@@ -2,6 +2,9 @@
 title: "Mess Meal Management - Shared-Household Meal Planning and Expense Tracking"
 label: "Household operations PWA"
 summary: "A React and Supabase PWA for meal registration, shared expenses, deposits, inventory, and household reporting."
+images:
+  - src: /images/projects/mess-meal-management.webp
+    alt: "Mess Meal Management daily interface"
 role: "Application and database implementation"
 contribution: "Meals, cutoffs, time synchronization, financial reporting, and migrations."
 stack: "React · TypeScript · Supabase · PostgreSQL"

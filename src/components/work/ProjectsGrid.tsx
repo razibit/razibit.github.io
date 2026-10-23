@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
+import ProjectImageCarousel, { type ProjectCardImage } from "./ProjectImageCarousel";
 import styles from "./ProjectsGrid.module.css";
 
 const INITIAL_PROJECT_COUNT = 9;
@@ -12,7 +13,7 @@ export type ProjectCardData = {
   title: string;
   label?: string;
   summary?: string;
-  imageUrl?: string;
+  images?: ProjectCardImage[];
   href: string;
   contribution?: string;
   stack?: string | string[];
@@ -155,7 +156,9 @@ export default function ProjectsGrid({ projects }: { projects: ProjectCardData[]
 
           return (
             <article className={styles.card} key={project.slug} aria-labelledby={`${gridId}-${project.slug}-heading`}>
-              {project.imageUrl && <img className={styles.image} src={project.imageUrl} alt="" />}
+              {project.images && project.images.length > 0 && (
+                <ProjectImageCarousel images={project.images} projectTitle={project.title} />
+              )}
               <div className={styles.cardBody}>
                 <p className={styles.label}>{project.label ?? "Project"}</p>
                 <h3 className={styles.title} id={`${gridId}-${project.slug}-heading`}>

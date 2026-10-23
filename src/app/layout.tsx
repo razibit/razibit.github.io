@@ -8,7 +8,15 @@ const config = getSiteConfig();
 export const metadata: Metadata = {
   title: config.site.title,
   description: config.site.description,
-  icons: config.site.favicon ? { icon: config.site.favicon } : undefined,
+  icons: {
+    icon: [
+      { url: config.site.favicon || "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

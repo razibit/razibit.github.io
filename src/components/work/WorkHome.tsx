@@ -4,6 +4,7 @@ import { publicAssetUrl, routeUrl, type ContentDocument, type ExperienceMeta, ty
 import type { SkillsContent } from "@/types/content";
 import NewsList from "@/components/shared/NewsList";
 import ProjectsGrid, { type ProjectCardData } from "@/components/work/ProjectsGrid";
+import SkillsGrid from "@/components/work/SkillsGrid";
 
 export default function WorkHome({
   config,
@@ -31,7 +32,15 @@ export default function WorkHome({
     title: project.meta.title,
     label: project.meta.label,
     summary: project.meta.summary,
-    imageUrl: project.meta.image ? publicAssetUrl(project.meta.image) : undefined,
+    images: project.meta.images?.length
+      ? project.meta.images.map((image) => ({
+        src: publicAssetUrl(image.src) ?? image.src,
+        alt: image.alt,
+      }))
+      : project.meta.image ? [{
+        src: publicAssetUrl(project.meta.image) ?? project.meta.image,
+        alt: `${project.meta.title} project image`,
+      }] : undefined,
     href: routeUrl(`/work/${project.slug}/`),
     contribution: project.meta.contribution,
     stack: project.meta.stack,
@@ -96,9 +105,7 @@ export default function WorkHome({
           <section id="skills" className="section" aria-labelledby="skills-heading" tabIndex={-1}>
             <h2 id="skills-heading">Skills</h2>
             {skills.note && <p className="supporting-note">{skills.note}</p>}
-            <dl className="skills-list">
-              {skills.groups.map((group) => <div key={group.name}><dt>{group.name}</dt><dd>{group.items.join(", ")}</dd></div>)}
-            </dl>
+            <SkillsGrid groups={skills.groups} />
           </section>
   
           <section id="about" className="section" aria-labelledby="about-heading" tabIndex={-1}>

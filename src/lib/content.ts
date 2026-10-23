@@ -52,11 +52,17 @@ export interface ProjectMeta extends ContentMeta {
   stack?: string | string[];
   outcome?: string;
   image?: string;
+  images?: ProjectImageMeta[];
   link?: string;
   repository?: string;
   demo?: string;
   featured?: boolean;
   order?: number;
+}
+
+export interface ProjectImageMeta {
+  src: string;
+  alt: string;
 }
 
 export interface ExperienceMeta extends ContentMeta {

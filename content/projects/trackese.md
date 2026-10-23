@@ -2,6 +2,9 @@
 title: "Trackese — Java Desktop Attendance Tracking with CSV History"
 label: "Desktop utility"
 summary: "A Java Swing app for student lists, attendance entry, and batch-specific CSV history."
+images:
+  - src: /images/projects/trackese.webp
+    alt: "Trackese application interface"
 role: "Recorded source and documentation contributor"
 contribution: "Application source snapshot, demo, and repository documentation."
 stack: "Java · Swing · CSV"

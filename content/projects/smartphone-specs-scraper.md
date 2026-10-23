@@ -2,6 +2,11 @@
 title: "Smartphone Specs Scraper - Python Data Collection for Structured Phone Catalogs"
 label: "Data collection tool"
 summary: "A Python CLI for discovering smartphone listings, extracting specifications and prices, and exporting validated CSV/JSON."
+images:
+  - src: /images/projects/smartphone-specs-scraper.webp
+    alt: "Smartphone Specs Scraper project overview"
+  - src: /images/projects/global-smartphone-dataset.webp
+    alt: "Global Smartphone Dataset listing on Kaggle"
 role: "Scraper creator"
 contribution: "Collection, validation, CSV/JSON exports, fixtures, and packaging."
 stack: "Python · requests · Beautiful Soup · pytest"

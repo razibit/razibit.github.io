@@ -1,0 +1,163 @@
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--placeholder);
+}
+
+.viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--placeholder);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+  -webkit-user-drag: none;
+  will-change: auto;
+}
+
+.slide[data-moving="true"] {
+  will-change: transform;
+  transition: transform var(--carousel-transition-duration) cubic-bezier(.22, .61, .36, 1);
+}
+
+.controls {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  display: inline-grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  transition: color 160ms ease, opacity 180ms ease;
+}
+
+.control:first-child {
+  left: 8px;
+}
+
+.control:last-child {
+  right: 8px;
+}
+
+.control::before {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--background) 88%, transparent);
+  content: "";
+  pointer-events: none;
+  transition: background-color 160ms ease;
+}
+
+.control svg {
+  position: relative;
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.35;
+}
+
+.frame:hover .control {
+  opacity: .78;
+}
+
+.frame:focus-within .control {
+  opacity: 1;
+}
+
+.control:hover:not(:disabled) {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.control:hover:not(:disabled)::before {
+  background: color-mix(in srgb, var(--background) 96%, transparent);
+}
+
+.control:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.control:disabled {
+  cursor: default;
+  opacity: .55;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 19px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 22px;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--background) 92%, transparent);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.indicator {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--control);
+  opacity: .75;
+}
+
+.indicator[data-active="true"] {
+  width: 14px;
+  background: var(--accent);
+  opacity: 1;
+}
+
+.announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (any-hover: none) {
+  .control {
+    opacity: 1;
+  }
+}

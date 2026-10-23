@@ -17,13 +17,6 @@
   background: color-mix(in srgb, var(--background) 94%, var(--accent));
 }
 
-.image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-}
-
 .cardBody {
   display: flex;
   min-width: 0;

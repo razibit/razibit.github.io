@@ -2,6 +2,11 @@
 title: "AI Text Moderation - Five-Class Chat Classification with BERT-Tiny"
 label: "Applied NLP course project"
 summary: "A five-class moderation experiment with weighted BERT-Tiny training, baseline comparison, and local Flask/browser demonstrations."
+images:
+  - src: /images/projects/ai-text-moderation-report.webp
+    alt: "AI Text Moderation experiment report"
+  - src: /images/projects/moderation-f1.png
+    alt: "Per-class F1 comparison for the text moderation models"
 role: "Team pipeline, training, and demo contributor"
 contribution: "Preprocessing, weighted training, comparison, Flask demo, and reporting."
 stack: "Python · PyTorch · scikit-learn · Flask · ONNX"

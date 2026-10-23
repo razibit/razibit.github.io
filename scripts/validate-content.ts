@@ -56,6 +56,14 @@ function checkDocs(
       if (typeof value === "string" && value) checkLocalAsset(`${collection}/${doc.slug}.${key}`, value);
     }
 
+    if (Array.isArray(doc.meta.images)) {
+      for (const [index, image] of doc.meta.images.entries()) {
+        if (!image || typeof image !== "object" || Array.isArray(image)) continue;
+        const src = (image as Record<string, unknown>).src;
+        if (typeof src === "string" && src) checkLocalAsset(`${collection}/${doc.slug}.images[${index}].src`, src);
+      }
+    }
+
     const imagePattern = /!\[[^\]]*\]\(\s*(?:<([^>]+)>|([^\s)]+))/g;
     for (const match of doc.body.matchAll(imagePattern)) {
       const value = match[1] ?? match[2];
@@ -209,7 +217,7 @@ try {
 
   checkDocs("posts", getCollection("posts"), z.object({ title, date, ...optionalFields }).passthrough());
   checkDocs("news", getCollection("news"), z.object({ title: title.optional(), date, ...optionalFields }).passthrough());
-  checkDocs("projects", getProjects(), z.object({ title, order: z.number().int().nonnegative().optional(), role: z.string().optional(), contribution: z.string().optional(), stack: z.union([z.string(), z.array(z.string())]).optional(), outcome: z.string().optional(), ...optionalFields }).passthrough());
+  checkDocs("projects", getProjects(), z.object({ title, order: z.number().int().nonnegative().optional(), role: z.string().optional(), contribution: z.string().optional(), stack: z.union([z.string(), z.array(z.string())]).optional(), outcome: z.string().optional(), images: z.array(z.object({ src: z.string().min(1), alt: z.string().min(1) })).optional(), ...optionalFields }).passthrough());
   checkDocs("experience", getExperience(), z.object({ title, dates: z.string().optional(), summary: z.string().optional(), ...optionalFields }).passthrough());
   checkDocs("materials", getMaterials(), z.object({ title, type: z.string().optional(), date: date.optional(), ...optionalFields }).passthrough());
   checkDocs("pages", getPages(), z.object({ title, ...optionalFields }).passthrough());

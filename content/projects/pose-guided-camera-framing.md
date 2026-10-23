@@ -2,6 +2,11 @@
 title: "Pose-Guided Camera Framing - Computer Vision Guidance for Solo Photography"
 label: "Computer vision research"
 summary: "A multi-task vision prototype that combines image features and human pose to assess framing and generate camera-adjustment instructions."
+images:
+  - src: /images/projects/pose-guided-camera-framing.webp
+    alt: "Pose-Guided Camera Framing research overview"
+  - src: /images/projects/pose-architecture.png
+    alt: "Architecture diagram showing visual and pose branches feeding framing predictions"
 role: "Project lead and primary researcher/developer"
 contribution: "Annotation, modeling, evaluation, browser inference, and research communication."
 stack: "Python · PyTorch · MediaPipe · ONNX"

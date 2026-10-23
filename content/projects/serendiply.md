@@ -2,6 +2,9 @@
 title: "Serendiply - Anonymous Text and Video Chat with Interest-Based Matching"
 label: "Real-time communication"
 summary: "A web chat platform combining WebRTC video, Redis-backed matching, real-time messaging, and reporting workflows."
+images:
+  - src: /images/projects/serendiply-banner.webp
+    alt: "Serendiply product overview"
 role: "Full-stack implementation contributor"
 contribution: "Chat, Redis matching, WebRTC signaling, reports, and recovery paths."
 stack: "Next.js · TypeScript · WebRTC · Socket.IO · Redis"

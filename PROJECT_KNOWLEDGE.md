@@ -123,6 +123,12 @@ Keep entries factual, concise, and dated where timing matters. Prefer confirmed 
 - Replaced the profile-column Light/Dark selector with a single sun/moon button at the far right of the global header. The moon appears in light mode and the sun appears in dark mode to show the next action.
 - The control keeps the `portfolio-theme` localStorage preference, uses the existing pre-render script for saved or operating-system preferences, and honors reduced-motion settings for theme transitions.
 
+### 2026-10-23 — Work portfolio browser and device icons
+
+- Replaced the prior teal text favicon with the blue handwritten “R” icon pack in the work portfolio's root `public/` assets. The ICO supplies 16, 32, and 48 px variants; separate PNGs cover browser favicons, Apple touch, and Android icons.
+- Root metadata links the favicon variants, Apple touch icon, and `site.webmanifest`. The manifest uses “Rajib Dab — Full-stack product engineer,” the short name “Rajib Dab,” blue `#0055AA`, a white background, and standalone display. The visible site header remains name-only.
+- The glyph was generated from Leckerli One by Gesine Todt, licensed under SIL Open Font License 1.1: https://raw.githubusercontent.com/google/fonts/main/ofl/leckerlione/METADATA.pb and https://raw.githubusercontent.com/google/fonts/main/ofl/leckerlione/OFL.txt.
+
 ### 2026-09-17 — Selected concept implementation
 
 - The user selected Profile & Practice and authorized implementation, fulfilling the earlier concept-selection gate.

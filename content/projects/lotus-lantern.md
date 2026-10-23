@@ -2,6 +2,9 @@
 title: "Lotus Lantern - Windows Music-Reactive Lighting with an OpenRGB-to-BLE Bridge"
 label: "Hardware/software integration"
 summary: "A local Node.js bridge that converts OpenRGB DDP color output into BLE commands for a tested LED controller."
+images:
+  - src: /images/projects/lotus-lantern-music-sync.jpg
+    alt: "Lotus Lantern LED music synchronization video thumbnail"
 role: "Bridge implementation contributor"
 contribution: "UDP connector, OpenRGB bridge, launcher, profiles, and demonstrations."
 stack: "Node.js · DDP/UDP · BLE · OpenRGB"

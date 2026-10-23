@@ -1,7 +1,10 @@
 ---
-title: "iLoveMd - Browser-Based Markdown Editing, Annotation, and Document Export"
+title: "iLoveMd - Browser-Based Markdown Workspace: Editing, Annotation, and Document Export"
 label: "Developer and writing tool"
 summary: "A local-first browser workspace with Markdown editing, rendered review, revision-aware annotations, and document exports."
+images:
+  - src: /images/projects/ilovemd-app.webp
+    alt: "iLoveMd application interface"
 role: "Workspace implementation contributor"
 contribution: "Rendering, storage, annotations, and browser export workflows."
 stack: "React · TypeScript · IndexedDB · Markdown · Playwright"
